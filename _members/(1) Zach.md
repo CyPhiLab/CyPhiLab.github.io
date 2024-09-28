@@ -6,7 +6,7 @@ description: PI. Assistant Professor of Mechanical and Aerospace Engineering at 
 # external_url: https://www.google.com
 ---
 
-![preview](headshot.png)
+<img src="headshot.png" alt="preview" style="width: 60%; border-radius: 20%;" />
 
 I am a researcher studying intelligence, both algorithmic and physical. My expertise is in robotics, control theory, and dynamical systems. In particular, much of my ongoing research focuses on the incorporation of physical and algorithmic compliance into robots, with the goal of producing systems that can more naturally, gracefully, and safely interact with the world around them.
 

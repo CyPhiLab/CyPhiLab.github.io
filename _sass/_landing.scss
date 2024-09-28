@@ -19,12 +19,25 @@
 
 .circle-image {
   width: 200%;                 // Increase the size of the image
-  max-width: 1000px;           // Adjust to control the maximum image size
+  max-width: 1000px;          // Adjust to control the maximum image size
   aspect-ratio: 1.7 / 1;
   border-radius: 10px;
   object-fit: cover;
   object-position: center;
-} 
+}
+
+// Media query for mobile devices
+@media (max-width: 768px) {
+  #container {
+    height: 50vh;             // Adjust the height for smaller screens
+  }
+
+  .circle-image {
+    width: 100%;              // Set the width to 100% to fit smaller screens
+    max-width: none;          // Remove max-width to allow full use of width
+    height: auto;             // Ensure height scales with width
+  }
+}
 // .some_element {
 //   position: relative;
 //   width: 20%;

@@ -29,3 +29,10 @@ Had I not removed my finger, the robot would have either crushed my finger or th
 
 
 ## Publications
+
+- Z. J. Patterson, W. Xiao, E. Sologuren, and D. Rus, “Safe Control for Soft-Rigid Robots with Self-Contact Using Control Barrier Functions,” Robosoft, Apr. 2024. [Link](https://arxiv.org/abs/2311.03189)
+- Z. J. Patterson, C. D. Santina, and D. Rus, “Modeling and Control of Intrinsically Elasticity Coupled Soft-Rigid Robots,” ICRA, May 2024. [Link](https://arxiv.org/abs/2311.05362)
+- Z. J. Patterson, E. Sologuren, C. Della Santina, and D. Rus, “Design and Control of Modular Soft-Rigid Hybrid Manipulators with Self-Contact,” Aug. 17, 2024, arXiv: arXiv:2408.09275. [Link](https://arxiv.org/abs/2408.09275)
+- Z. J. Patterson, A. P. Sabelhaus, and C. Majidi, “Robust Control of a Multi-Axis Shape Memory Alloy-Driven Soft Manipulator,” IEEE Robotics and Automation Letters, Apr. 2022. [Link](https://arxiv.org/abs/2110.10022)
+- A. P. Sabelhaus, Z. J. Patterson, A. T. Wertz, and C. Majidi, “Safe Supervisory Control of Soft Robot Actuators,” Soft Robotics, Aug. 2024. [Link](https://www.liebertpub.com/doi/full/10.1089/soro.2022.0131)
+

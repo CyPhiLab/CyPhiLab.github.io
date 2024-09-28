@@ -1,0 +1,26 @@
+
+<div class="card-columns m-3 mt-5">
+
+  <!-- Local member -->
+  {% for member in site.members %}
+
+    {%- assign member_type  = "local" -%}
+    {%- assign member_id    = member.name | slugify -%}
+    {%- assign member_img   = member.image -%}
+    {%- assign member_name  = member.name -%}
+    {%- assign member_desc  = member.description -%}
+    {%- assign member_tools = member.tools -%}
+
+    {%- if member.external_url -%}
+      {%- assign member_url = member.external_url -%}
+      {%- assign external    = true -%}
+    {%- else -%}
+      {%- assign member_url = member.url | relative_url -%}
+      {%- assign external    = false -%}
+    {%- endif -%}
+
+    {% include members/member-card.html %}
+
+  {% endfor %}
+
+</div>

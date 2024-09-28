@@ -17,7 +17,7 @@ Thank you for your interest in the group. I am currently recruiting students to 
 
 I am always excited to mentor exceptional students on their path to a PhD. If you are interested in joining my group as a PhD student, please [apply](https://case.edu/gradstudies/prospective-students/admissions-information) to Case's EMAE [PhD program](https://bulletin.case.edu/engineering/mechanical-aerospace-engineering/mechanical-engineering-phd/#text). Indicate the Dynamics, Controls and Manufacturing concentration on your application. In your personal statement, make sure to discuss why you are interested in working in my lab in particular. If you are worried about the application fee, please note that the MAE department has waivers available upon request. 
 
-*After* submitting your application, please contact me via email and I will be glad to review it.
+Feel free to contact me via email (include your CV and a brief note describing your interest) and we can discuss your potential fit with my group.
 
 ## Undergraduate Students
 

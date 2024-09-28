@@ -10,7 +10,7 @@ weight: 4
 <br>
 
 # **Research**
-
+For the most up to date snapshot of output, check out [google scholar](https://scholar.google.com/citations?hl=en&user=wDqCShMAAAAJ&view_op=list_works&sortby=pubdate).
 
 ## Interaction-safe Robots
 {% include projects/index_srh.html %}

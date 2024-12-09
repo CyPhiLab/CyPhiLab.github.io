@@ -8,7 +8,7 @@ category: bio
 
 # Sea Turtle Robots
 
-I have an ongoing project to design, build, and deploy a biomimetic sea turtle robot. The robot has biomimetic flippers with soft deformable flippers containing embedded articulated "skeletons." The goal for the project is to produce a minimally invasive amphibious system for marine environment exploration. We are also using it to explore problems in control and reinforcement learning. We hope the platform provides an accessible way for experts in control and perception to get involved in the exciting marine robotics space. 
+I have an ongoing project to design, build, and deploy a biomimetic sea turtle robot. The robot has biomimetic flippers with soft deformable flippers containing embedded articulated "skeletons." The goal for the project is to produce a minimally invasive amphibious system for marine environment exploration. We are also using it to explore problems in control and reinforcement learning. We hope the platform provides an accessible way for experts in control and perception to get involved in the exciting marine robotics space. We recently took the robot to St. John, USVI, for the first field deployment of the robot. 
 
 ![preview](turtle_up_down.gif)
 

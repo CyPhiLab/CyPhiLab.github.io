@@ -6,6 +6,10 @@ weight: 1
 ---
 
 # **About CyPhi Lab**
+<!-- <h1 style="display: flex; align-items: center; gap: 0.5em; flex-wrap: wrap;">
+  About CyPhi Lab  <img src="/logo_blue.png" alt="Logo"
+       style="height: 1.6em; width: auto; display: inline-block;">
+</h1> -->
 
 <!-- Hi my name **{{ site.author.name }}** :wave:,<br> -->
 \

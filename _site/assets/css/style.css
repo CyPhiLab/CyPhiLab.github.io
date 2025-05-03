@@ -139,7 +139,7 @@ body { font-family: "Poppins", sans-serif; }
 
 .navbar-brand:not(:has(img))::after { margin-top: -0.25em; }
 
-.logo-img { height: 80px; width: auto; max-height: 100%; }
+.logo-img { height: 60px; width: auto; max-height: 100%; }
 
 @media (max-width: 768px) { .logo-img { height: 32px; } }
 .markdown-body h1, .markdown-body h2 { margin-top: 32px; }

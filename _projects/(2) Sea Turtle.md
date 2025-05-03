@@ -1,14 +1,14 @@
 ---
-name: Sea Turtle Robots
+name: Marine Robots
 # tools: [C#, XML, WPF]
 image: turtle_oracle.gif
-description: What it says on the tin - we build sea turtles for marine exploration.
+description: What it says on the tin - we build sea turtles and other animals for marine exploration.
 category: bio
 ---
 
-# Sea Turtle Robots
+# Bioinspired Marine Robots
 
-I have an ongoing project to design, build, and deploy a biomimetic sea turtle robot. The robot has biomimetic flippers with soft deformable flippers containing embedded articulated "skeletons." The goal for the project is to produce a minimally invasive amphibious system for marine environment exploration. We are also using it to explore problems in control and reinforcement learning. We hope the platform provides an accessible way for experts in control and perception to get involved in the exciting marine robotics space. We recently took the robot to St. John, USVI, for the first field deployment of the robot. 
+I have an ongoing project to design, build, and deploy aquatic biomimetic robots. The most exciting one we have done is a sea turtle, which has biomimetic soft deformable flippers containing embedded articulated "skeletons." The goal for the project is to produce a minimally invasive amphibious system for marine environment exploration. We are also using it to explore problems in control and reinforcement learning. We hope the platforms we develop provide an accessible way for experts in control and perception to get involved in the exciting bioinspired marine robotics space. We recently took the robot to St. John, USVI, for the first field deployment of our robot. 
 
 ![preview](turtle_up_down.gif)
 

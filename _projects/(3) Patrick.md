@@ -12,7 +12,7 @@ category: bio
 The goal of this research project was to produce a state-of-the-art soft robot inspired by the brittle star, a curious order of echinoderms that is suprisingly mobile. The following Youtube video contains a nice overview of this interesting species:
 {% include elements/video.html id="50fSuNqq-JQ" %}
 
-In early 2020, we developed what was at the time (and still is) perhaps the most sophisticated untethered soft robot ever created. The device has a suite of sensors and 20 shape memory alloy actuators, which allow for very tight system integration as long as you are OK sacrificing efficiency. Here is a video from our initial paper:
+In early 2020, we developed what was at the time (and maybe still is) perhaps the most sophisticated untethered soft robot ever created. The device has a suite of sensors and 20 shape memory alloy actuators, which allow for very tight system integration as long as you are OK sacrificing efficiency. Here is a video from our initial paper:
 {% include elements/video.html id="j18NgpCnn3c" %}
 
 We used the robot to make fundamental contributions in soft robot control and manufacturing, along with making contributions to the physics of underwater walking (this work is still in preparation but a preliminary form can be found in Zach Patterson's thesis).

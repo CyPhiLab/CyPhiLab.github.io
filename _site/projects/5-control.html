@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+
+<!--
+  portfolYOU Jekyll theme by yousinix
+  Free for personal and commercial use under the MIT license
+  https://github.com/yousinix/portfolYOU
+-->
+
+<html lang="en" class="h-100">
+
+<head>
+
+  
+  
+  
+
+  
+
+  
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Safe Control">
+  <meta property="og:description" content="We are thinking about how to control soft-rigid systems to ensure safety in unknown environments.">
+  <meta property="og:image" content="flipper.gif">
+  
+  <title>Safe Control</title>
+  <meta name="description" content="We are thinking about how to control soft-rigid systems to ensure safety in unknown environments.">
+
+  <link rel="shortcut icon" type="image/x-icon" href="/assets/favicon.ico">
+
+  <!-- Theme style -->
+  <script src="/assets/js/theme.js"></script>
+
+  <!-- Font Awesome CDN -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
+
+  <!-- Bootstrap CSS CDN -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
+
+  <!-- Animate CSS CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.css">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="/assets/css/style.css">
+
+</head>
+
+
+<body class="h-100 d-flex flex-column">
+
+  <main class="flex-shrink-0 container mt-5">
+    
+<nav class="navbar navbar-expand-lg navbar-themed">
+
+    <a class="navbar-brand d-flex align-items-center" href="/">
+        <img src="/logo_g.png" alt="Site Logo" class="logo-img mr-2">
+        <h5 class="mb-0"><b>CyPhiLab</b></h5>
+    </a>  
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <i class="fas fa-1x fa-bars text-themed"></i>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav ml-auto"><a class="nav-item nav-link " href="/about/">About</a>
+  
+        <a class="nav-item nav-link " href="/members/">Members</a>
+  
+        <a class="nav-item nav-link active" href="/projects/">Research</a>
+  
+        <a class="nav-item nav-link " href="/students/">Prospective Students</a>
+  
+        
+  
+        <span id="theme-toggler" class="nav-item nav-link" role="button" onclick="toggleTheme()"></span>
+      </div>
+    </div>
+  
+  </nav>
+  
+    <div class="col-lg-10 mx-auto mt-5 markdown-body">
+  <h1 id="control-of-robots-in-uncertain-environments">Control of Robots in Uncertain Environments</h1>
+
+<p>How should robots imbued with structural flexibility be controlled in order to maximize safety and robustness while also allowing precision? This question motivates by current focus within control, and my lab explores it through a variety of different approaches. While traditional approaches (e.g. impedance control) get us pretty far, we have recently begun to incorporate optimization-based control which can encode the unique physical attributes of our new classes of soft-rigid hybrid robots, allowing us to solve more complex control problems and directly encode notions of safety.</p>
+
+<p>A major motivator for my current work is the apparent contradiction between precision of traditional feedback control and the closed loop compliance of a robotic system. Essentially, as we turn up our proportional control knob to decrease the control error, we reduce the compliance of the system, as seen in the following simple demo.
+<img src="highk.gif" alt="preview" />
+Had I not removed my finger, the robot would have either crushed my finger or the motors would have burnt out. This means that our cuddly, “safe” soft robot is not so safe when operated with pure feedback control. Thus, for this work we are seeking alternatives.</p>
+
+<h2 id="control-barrier-functions-for-soft-robots">Control Barrier Functions for Soft Robots</h2>
+<p><img src="cbf_gif_new.gif" alt="preview" /></p>
+
+<h2 id="sensorless-fofce-control">Sensorless Fofce Control</h2>
+<p><img src="flipper.gif" alt="preview" /></p>
+
+<h2 id="impedance-control">Impedance Control</h2>
+<p><img src="impedance_new.gif" alt="preview" /></p>
+
+<h2 id="safe-control-with-actuator-saturation">Safe Control with Actuator Saturation</h2>
+<p><img src="sma.gif" alt="preview" /></p>
+
+<h2 id="publications">Publications</h2>
+
+<ul>
+  <li>Z. J. Patterson, W. Xiao, E. Sologuren, and D. Rus, “Safe Control for Soft-Rigid Robots with Self-Contact Using Control Barrier Functions,” Robosoft, Apr. 2024. <a href="https://arxiv.org/abs/2311.03189">Link</a></li>
+  <li>Z. J. Patterson, C. D. Santina, and D. Rus, “Modeling and Control of Intrinsically Elasticity Coupled Soft-Rigid Robots,” ICRA, May 2024. <a href="https://arxiv.org/abs/2311.05362">Link</a></li>
+  <li>Z. J. Patterson, E. Sologuren, C. Della Santina, and D. Rus, “Design and Control of Modular Soft-Rigid Hybrid Manipulators with Self-Contact,” Aug. 17, 2024, arXiv: arXiv:2408.09275. <a href="https://arxiv.org/abs/2408.09275">Link</a></li>
+  <li>Z. J. Patterson, A. P. Sabelhaus, and C. Majidi, “Robust Control of a Multi-Axis Shape Memory Alloy-Driven Soft Manipulator,” IEEE Robotics and Automation Letters, Apr. 2022. <a href="https://arxiv.org/abs/2110.10022">Link</a></li>
+  <li>A. P. Sabelhaus, Z. J. Patterson, A. T. Wertz, and C. Majidi, “Safe Supervisory Control of Soft Robot Actuators,” Soft Robotics, Aug. 2024. <a href="https://www.liebertpub.com/doi/full/10.1089/soro.2022.0131">Link</a></li>
+</ul>
+
+
+</div>
+  </main>
+  <footer class="mt-auto py-3 text-center">
+
+  <small class="text-muted mb-2">
+    <!-- <i class="fas fa-code"></i> with <i class="fas fa-heart"></i> -->
+    <!-- by <strong>Zach Patterson</strong> -->
+    <strong>&Psi;&Phi;Lab</strong>
+  </small>
+
+  <div class="container-fluid justify-content-center"><a class="social mx-1"  href="mailto:zpatt@case.edu"
+       style="color: #6c757d"
+       onMouseOver="this.style.color='#db4437'"
+       onMouseOut="this.style.color='#6c757d'">
+      <i class="fas fa-envelope fa-1x"></i>
+    </a><a class="social mx-1"  href="https://www.github.com/CyPhiLab"
+       style="color: #6c757d"
+       onMouseOver="this.style.color='#333333'"
+       onMouseOut="this.style.color='#6c757d'">
+      <i class="fab fa-github fa-1x"></i>
+    </a>
+
+</div>
+
+  <!---->
+  <!-- <small id="attribution">
+    theme <a href="https://github.com/YoussefRaafatNasry/portfolYOU">portfolYOU</a>
+  </small> -->
+
+</footer>
+
+  
+  <!-- GitHub Buttons -->
+<script async defer src="https://buttons.github.io/buttons.js"></script>
+
+<!-- jQuery CDN -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<!-- Popper.js CDN -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
+
+<!-- Bootstrap JS CDN -->
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+<!-- wow.js CDN & Activation -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.js"></script>
+<script> new WOW().init(); </script>
+
+<!-- Initialize all tooltips -->
+<script>
+$(function () {
+    $('[data-toggle="tooltip"]').tooltip()
+})
+</script>
+</body>
+
+</html>

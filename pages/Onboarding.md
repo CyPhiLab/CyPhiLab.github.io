@@ -103,4 +103,4 @@ Welcome to the lab! This document outlines the essential steps you need to compl
 
 ---
 
-✅ Once you’ve completed these steps, you’ll be fully onboarded and ready to start working in the lab.
+Once you’ve completed these steps, you’ll be fully onboarded and ready to start working in the lab.

@@ -84,7 +84,8 @@ Welcome to the lab! This document outlines the essential steps you need to compl
      [YouTube – Bambu Labs Beginner Tutorials](https://www.youtube.com/playlist?list=PLFUVS59deIm2mawl3Zjk1XI9yp7H7955J)  
   2. Download & install **Bambu Studio**: [Bambu Studio Download](https://bambulab.com/en/download/studio).  
   3. Ask Zach for the **printer login credentials**.  
-  4. **Important:** Each printer has a **different nozzle size** – double-check filament and nozzle diameter when slicing your part.  
+  4. We will likely change to a new printer management system soon. Stay tuned.
+  5. **Important:** Each printer has a different nozzle size. Double-check filament and nozzle diameter when slicing your part. 
 
 ---
 

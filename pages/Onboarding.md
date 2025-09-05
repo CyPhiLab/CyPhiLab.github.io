@@ -1,8 +1,10 @@
 ---
 layout: default
 title: Onboarding
+robots: noindex
 permalink: /onboarding/
 ---
+<br>
 
 # CyPhiLab Onboarding Guide
 

@@ -1,3 +1,9 @@
+---
+layout: default
+title: Onboarding
+permalink: /onboarding/
+---
+
 # CyPhiLab Onboarding Guide
 
 Welcome to the lab! 🎉 This document outlines the essential steps you need to complete in your first week. Please go through these items carefully. If you have any questions, reach out to Zach (zpatt@case.edu).

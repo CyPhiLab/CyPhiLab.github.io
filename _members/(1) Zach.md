@@ -13,3 +13,5 @@ I am a researcher studying intelligence, both algorithmic and physical. My exper
 I am an assistant professor at Case Western Reserve University in the department of Mechanical and Aerospace Engineering with an affiliation to the Human Fusions Institute. There, I run the Cybernetics and Physical Intelligence Lab (CyPhi Lab). Before that, I was a postdoc at MIT’s CSAIL. I got my PhD in Mechanical Engineering at CMU and my BS in Mechanical Engineering at Pitt. My research has been covered in the popular press by outlets such as the BBC, Scientific American, the Wall Street Journal, and Mashable.
 
 If you are interested in joining my group you can see my page for interested students.
+
+[See my CV](assets/CV_zpatters.pdf)

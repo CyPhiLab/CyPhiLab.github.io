@@ -1,7 +1,7 @@
 ---
 name: Zach Patterson
 # tools: [nothing, important]
-image: headshot.png
+image: headshot.jpg
 description: PI. Assistant Professor of Mechanical and Aerospace Engineering at Case Western.
 # external_url: https://www.google.com
 ---

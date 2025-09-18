@@ -1,3 +1,10 @@
+---
+layout: page
+title: "CV"
+robots: noindex
+permalink: /cv/
+---
+
 # Zach J. Patterson
 
 2049 West 28th Street, Cleveland OH, 44113  

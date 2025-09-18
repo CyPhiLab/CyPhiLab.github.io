@@ -49,7 +49,7 @@ jobs:
           CROSSREF_MAILTO: ${{ secrets.CROSSREF_MAILTO }}
         run: |
           set -euo pipefail
-          python /_scripts/update_cv_markdown.py
+          python _scripts/update_cv_markdown.py
           echo "Updater finished."
 
       - name: Commit changes (if any)

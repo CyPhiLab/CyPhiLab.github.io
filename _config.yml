@@ -21,6 +21,7 @@ nav_exclude:                                            # The following paths ar
   - pages/Research.md
   - pages/Onboarding.md
   - pages/cv.md
+  - assets/cv_md/cv_template.md
 
 
 ### Author Info ###

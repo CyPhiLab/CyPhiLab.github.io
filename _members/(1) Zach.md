@@ -15,4 +15,4 @@ I am an assistant professor at Case Western Reserve University in the department
 If you are interested in joining my group you can see my page for interested students.
 
 <!-- [See my CV](/assets/CV_zpatters.pdf) -->
-[See my CV](/pages/cv.md)
+[See my CV](/cv/)

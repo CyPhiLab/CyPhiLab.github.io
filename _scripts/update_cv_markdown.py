@@ -25,7 +25,9 @@ USER_AGENT    = "orcid-to-bib/0.1 (mailto:zpatt@case.edu)"
 # --------------------------------------------
 
 # ----------------- PATH CONSTANTS ----------
-CV_MD_DIR = "cv_md"
+# Get the directory where this script is located
+SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
+CV_MD_DIR = os.path.join(SCRIPT_DIR, "cv_md")
 JOURNAL_MD = os.path.join(CV_MD_DIR, "journal_publications.md")
 CONF_MD = os.path.join(CV_MD_DIR, "conference_publications.md")
 BOOK_MD = os.path.join(CV_MD_DIR, "book_publications.md")
@@ -574,7 +576,8 @@ def main():
     # --- 7. Export cv.md to pages directory ---
     try:
         cv_content = read_file(CV_MD)
-        pages_cv_path = "../pages/cv.md"
+        # Calculate path to pages directory relative to script location
+        pages_cv_path = os.path.join(SCRIPT_DIR, "..", "pages", "cv.md")
         write_file(pages_cv_path, cv_content)
         logging.info(f"✅ Exported CV to {pages_cv_path}")
     except Exception as e:

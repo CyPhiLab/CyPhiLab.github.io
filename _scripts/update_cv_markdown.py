@@ -422,9 +422,32 @@ def generate_combined_markdown(output_file=PUBS_MD):
 
 def update_full_cv_markdown(template_file=CV_TEMPLATE_MD, output_file=CV_MD):
     """Update the full CV markdown file, replacing only the publications section."""
+    
+    # Define the required YAML frontmatter
+    yaml_frontmatter = """---
+layout: page
+title: "CV"
+robots: noindex
+permalink: /cv/
+---
+
+"""
+    
     try:
         # Read the template file
         cv_content = read_file(template_file)
+        
+        # Remove existing frontmatter if present
+        if cv_content.startswith('---'):
+            # Find the end of existing frontmatter
+            lines = cv_content.split('\n')
+            end_idx = -1
+            for i, line in enumerate(lines[1:], 1):  # Start from line 1, skip first ---
+                if line.strip() == '---':
+                    end_idx = i + 1
+                    break
+            if end_idx > 0:
+                cv_content = '\n'.join(lines[end_idx:])
         
         # Generate the publications content
         publications_content = ""
@@ -464,14 +487,24 @@ def update_full_cv_markdown(template_file=CV_TEMPLATE_MD, output_file=CV_MD):
         current_date = datetime.now().strftime("%B %d, %Y")
         updated_cv = re.sub(r'\[DATE\]', current_date, updated_cv)
         
+        # Ensure YAML frontmatter is at the beginning
+        final_cv = yaml_frontmatter + updated_cv.lstrip()
+        
         # Write the updated CV
-        write_file(output_file, updated_cv)
+        write_file(output_file, final_cv)
         logging.info(f"Updated full CV markdown file: {output_file}")
         
     except FileNotFoundError:
         logging.warning(f"Template file not found: {template_file}. Creating from publications only.")
         # If template doesn't exist, fall back to publications-only file
         generate_combined_markdown(output_file)
+        # Still add frontmatter to the generated file
+        try:
+            content = read_file(output_file)
+            final_content = yaml_frontmatter + content
+            write_file(output_file, final_content)
+        except Exception as e:
+            logging.error(f"Error adding frontmatter to fallback file: {e}")
     except Exception as e:
         logging.error(f"Error updating full CV markdown: {e}")
 

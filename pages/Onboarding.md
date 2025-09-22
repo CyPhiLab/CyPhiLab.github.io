@@ -20,6 +20,7 @@ Welcome to the lab! This document outlines the essential steps you need to compl
 ---
 
 ## 2. Fill Out Volunteer Paperwork (if volunteering)
+- Not applicable for currently enrolled students
 - [Volunteer Paperwork Form](https://case.edu/ehs/sites/default/files/2018-02/Minors_in_Workplace_Guidelines_1-2018.pdf)
 - Send the form to Zach after filling out and signing. 
 - Let Zach know if there are any questions.

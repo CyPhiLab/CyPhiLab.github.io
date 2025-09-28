@@ -6,7 +6,7 @@
 ## Journal Articles
 
 - **Zach J. Patterson**, Henry C. Astley, Carmel Majidi, "Soft robotic brittle star shows the influence of mass distribution on underwater walking." *Bioinspiration & Biomimetics*, March 2025. [DOI](https://doi.org/10.1088/1748-3190/adbecb)
-- Akua K. Dickson, Juan C. P. Garcia, Meredith L. Anderson, Ran Jing, Sarah Alizadeh-Shabdiz, Audrey X. Wang, Charles DeLorey, **Zach J. Patterson**, Andrew P. Sabelhaus, "Safe Autonomous Environmental Contact for Soft Robots Using Control Barrier Functions." *IEEE Robotics and Automation Letters*, 2025. [DOI](https://doi.org/10.1109/lra.2025.3609669)
+- Akua K. Dickson, Juan C. P. Garcia, Meredith L. Anderson, Ran Jing, Sarah Alizadeh-Shabdiz, Audrey X. Wang, Charles DeLorey, **Zach J. Patterson**, Andrew P. Sabelhaus, "Safe Autonomous Environmental Contact for Soft Robots Using Control Barrier Functions." *IEEE Robotics and Automation Letters*, November 2025. [DOI](https://doi.org/10.1109/lra.2025.3609669)
 - Andrew P. Sabelhaus, **Zach J. Patterson**, Anthony T. Wertz, Carmel Majidi, "Safe Supervisory Control of Soft Robot Actuators." *Soft Robotics*, August 2024. [DOI](https://doi.org/10.1089/soro.2022.0131)
 - **Zach J. Patterson**, Dinesh K. Patel, Sarah Bergbreiter, Lining Yao, Carmel Majidi, "A Method for 3D Printing and Rapid Prototyping of Fieldable Untethered Soft Robots." *Soft Robotics*, April 2023. [DOI](https://doi.org/10.1089/soro.2022.0003)
 - Richard Desatnik, **Zach J. Patterson**, Przemysław Gorzelak, Samuel Zamora, Philip LeDuc, Carmel Majidi, "Soft robotics informs how an early echinoderm moved." *Proceedings of the National Academy of Sciences*, November 2023. [DOI](https://doi.org/10.1073/pnas.2306580120)

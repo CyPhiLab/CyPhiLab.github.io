@@ -46,7 +46,8 @@ Welcome to the lab! This document outlines the essential steps you need to compl
 ## 5. Lab Inventory
 - Bookmark the lab’s **Inventory Sheet**:  
   [Google Sheet – Lab Inventory](https://docs.google.com/spreadsheets/d/10niCTJEm72EDHyObIiFvc1e1934cKfpCB7bvyZZUed4/edit?usp=sharing)  
-- This sheet is used to **log and search for all equipment and tools**.  
+- This sheet is used to **log and search for all equipment and tools**.
+- Our Tools and Equipment primarily live in Robotics Cabinet #7 and #9. Please do not use other equipment in the facility without asking Zach first.
 - To add items:
   1. Scan one of the QR codes posted around the lab.  
   2. Fill out the Google Form.  

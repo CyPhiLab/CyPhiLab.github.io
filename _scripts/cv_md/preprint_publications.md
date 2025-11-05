@@ -3,7 +3,7 @@
 
 ## Preprints
 
-- Maximilian Stölzle, T. K. Rusch, **Zach J. Patterson**, Rodrigo Pérez-Dattari, Francesco Stella, Josie Hughes, Cosimo Della Santina, Daniela Rus, "Learning to Move in Rhythm: Task-Conditioned Motion Policies with Orbital Stability Guarantees." *arXiv preprint arXiv:ARXIV.2507.10602*, 2025. [DOI](https://doi.org/10.48550/ARXIV.2507.10602)
-- **Zach J. Patterson**, Emily Sologuren, Cosimo Della Santina, Daniela Rus, "Design and Control of Modular Soft-Rigid Hybrid Manipulators with Self-Contact." *arXiv preprint arXiv:ARXIV.2408.09275*, 2024. [DOI](https://doi.org/10.48550/ARXIV.2408.09275)
-- Makram Chahine, T. Konstantin Rusch, **Zach J. Patterson**, Daniela Rus, "Improving Efficiency of Sampling-based Motion Planning via
+3. Maximilian Stölzle, T. K. Rusch, **Zach J. Patterson**, Rodrigo Pérez-Dattari, Francesco Stella, Josie Hughes, Cosimo Della Santina, Daniela Rus, "Learning to Move in Rhythm: Task-Conditioned Motion Policies with Orbital Stability Guarantees." *arXiv preprint arXiv:ARXIV.2507.10602*, 2025. [DOI](https://doi.org/10.48550/ARXIV.2507.10602)
+2. **Zach J. Patterson**, Emily Sologuren, Cosimo Della Santina, Daniela Rus, "Design and Control of Modular Soft-Rigid Hybrid Manipulators with Self-Contact." *arXiv preprint arXiv:ARXIV.2408.09275*, 2024. [DOI](https://doi.org/10.48550/ARXIV.2408.09275)
+1. Makram Chahine, T. Konstantin Rusch, **Zach J. Patterson**, Daniela Rus, "Improving Efficiency of Sampling-based Motion Planning via
   Message-Passing Monte Carlo." *arXiv preprint arXiv:2410.03909v2*, 2024

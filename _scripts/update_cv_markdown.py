@@ -369,11 +369,14 @@ def generate_markdown_from_entries(entries_dict, output_file, entry_type, sectio
         reverse=True
     )
 
-    # Generate Markdown entries
+    # Generate Markdown entries with numbering (newest first = highest number)
     markdown_entries = []
-    for key, entry in sorted_entries:
+    total_entries = len(sorted_entries)
+    for i, (key, entry) in enumerate(sorted_entries):
         markdown_entry = format_markdown_entry(entry, entry_type)
-        markdown_entries.append(f"- {markdown_entry}")
+        # Number from highest to lowest (newest to oldest)
+        entry_number = total_entries - i
+        markdown_entries.append(f"{entry_number}. {markdown_entry}")
 
     # Write to output file
     content = (

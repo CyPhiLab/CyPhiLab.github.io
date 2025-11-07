@@ -3,4 +3,4 @@
 
 ## Book Chapters
 
-1. Weicheng Huang, **Zachary Patterson**, Carmel Majidi, M. K. Jawed, "Modeling Soft Swimming Robots using Discrete Elastic Rod Method." *Bioinspired Sensing, Actuation, and Control in Underwater Soft Robotic Systems*, November 2020. [DOI](https://doi.org/10.1007/978-3-030-50476-2_13)
+**1.** Weicheng Huang, **Zachary Patterson**, Carmel Majidi, M. K. Jawed, "Modeling Soft Swimming Robots using Discrete Elastic Rod Method." *Bioinspired Sensing, Actuation, and Control in Underwater Soft Robotic Systems*, November 2020. [DOI](https://doi.org/10.1007/978-3-030-50476-2_13)

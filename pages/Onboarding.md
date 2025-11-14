@@ -61,7 +61,7 @@ Welcome to the lab! This document outlines the essential steps you need to compl
   - Create a **GitHub account**.  
   - Share your username with Zach.  
 - Recommended setup: **VSCode + GitHub**.  
-  - Tutorial: [Getting started with GitHub in VSCode](https://code.visualstudio.com/docs/sourcecontrol/overview).
+  - Tutorial: [Using Git with Visual Studio Code](https://learn.microsoft.com/en-us/shows/visual-studio-code/using-git-with-visual-studio-code-official-beginner-tutorial).
 
 ---
 

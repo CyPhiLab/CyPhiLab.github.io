@@ -129,4 +129,4 @@ Email: [zpatt@case.edu](mailto:zpatt@case.edu) | Phone: (814) 329-8242
 ---
 *For the most up to date publication list, see Google Scholar [https://scholar.google.com/citations?user=wDqCShMAAAAJ&hl=en&oi=ao](https://scholar.google.com/citations?user=wDqCShMAAAAJ&hl=en&oi=ao)*
 
-*CV last updated: November 16, 2025*
+*CV last updated: November 23, 2025*

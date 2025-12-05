@@ -10,6 +10,15 @@ permalink: /onboarding/
 
 Welcome to the lab! This document outlines the essential steps you need to complete in your first week. Please go through these items carefully. If you have any questions, reach out to Zach (zpatt@case.edu).
 
+
+The CyPhiLab is located in the Human Fusions Institute on the 3rd floor of the BioEnterprise building. We share the lab with several other research groups, and as such, we need to be good citizens of the facility. The most important rules are 
+1. No food or drink in the labs.
+
+2. Always clean up after yourself. Do not leave tools, equipment, or materials sitting out in the lab unless you have permission from Zach to do so. 
+
+3. Do not use tools or materials unless you know you are allowed to use it. We are developing a better policy for sharing materials, but for now, you may use anything in Robotics Cabinets #7 and #9. For other tools, materials, and equipment, you should ask Zach for permission first.
+
+
 ---
 
 ## 1. Complete Safety Trainings
@@ -17,17 +26,17 @@ Welcome to the lab! This document outlines the essential steps you need to compl
     - [Laboratory Safety Training](https://case.edu/ehs/training/laboratory-safety)
     - [Biosafety Training](https://case.edu/ehs/training/biosafety-training)
 
----
+<!-- ---
 
 ## 2. Fill Out Volunteer Paperwork (if volunteering)
 - Not applicable for currently enrolled students
 - [Volunteer Paperwork Form](https://case.edu/ehs/sites/default/files/2018-02/Minors_in_Workplace_Guidelines_1-2018.pdf)
 - Send the form to Zach after filling out and signing. 
-- Let Zach know if there are any questions.
+- Let Zach know if there are any questions. -->
 
 ---
 
-## 3. Card Access
+## 2. Card Access
 - Email **Simone Quartell (simonequartell@case.edu)** with:
   - Your **Case username** (e.g., abc123)  
   - Your **7-digit Case ID number** (on your Case ID card)  
@@ -36,10 +45,18 @@ Welcome to the lab! This document outlines the essential steps you need to compl
 
 ---
 
-## 4. Communication Platforms
+## 3. Communication Platforms
 - Zach will add you to:
   - **Lab Teams** – our **primary communication platform**. Please check it regularly.  
   - **HFI Teams** – for **facility-level announcements**.
+
+---
+
+## 4. Lab Meetings
+- Fill out this **Timeful** poll with your weekly availability:  
+  [Weekly Scheduling Poll](https://timeful.app/e/db2E39)  
+- This will be used to schedule lab meetings. All members of the lab will be expected to attend lab meetings regularly and are expected to inform Zach if they will have to miss meetings. 
+- At lab meetings, members will be expected to give quick updates on their progress and to solicit help from Zach and other members of the lab on sticking points. 
 
 ---
 
@@ -70,13 +87,6 @@ Welcome to the lab! This document outlines the essential steps you need to compl
   - Create an **Onshape account** with your **Case email**: [Onshape Sign-In](https://cad.onshape.com/signin).  
   - Send Zach the email address you used.  
 - All lab CAD work is done in Onshape for **collaboration and version control**.
-
----
-
-## 8. Scheduling
-- Fill out this **When2Meet** poll with your weekly availability:  
-  [Weekly Scheduling Poll](https://www.when2meet.com/?31799936-At9wm)  
-- This will be used to schedule lab meetings.
 
 ---
 

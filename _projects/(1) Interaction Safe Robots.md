@@ -1,5 +1,5 @@
 ---
-name: Soft-Rigid Hybrids
+name: Integrated multi-material robots
 # tools: [nothing, important]
 image: impedance_new.gif
 description: Inspired by nature, are creating robots that leverage varying structural properties and materials.
@@ -7,9 +7,9 @@ description: Inspired by nature, are creating robots that leverage varying struc
 category: srh
 ---
 
-# Soft-Rigid Hybrids
+# Integrated multi-material robots
 
-My current overarching research thrust is to develop robot systems that can operate with stronger safety guarantees in sensitive settings. Most work on this topic currently focuses on algorithmically guaranteed safety. I am also excited about this topic, and a number of my recent and upcoming papers focus on this theme. However, the basic physical properties of the robot ultimately provide constraints on what safety means and how strict the algorithm must be. Therefore, I am building robots that are designed with these algorithms in mind in order to maximize their effectiveness. The end goal is to create robots that, like humans, are not afraid of bumping into the world in unexpected ways. Ongoing work centers around the design of a novel class of soft-rigid hybrid systems that tightly integrates traditional engineering materials as well as materials to more closely mimic soft tissue. Examples of this include the serial soft-rigid robot below on this page, as well as the turtle robot displayed in the Biomimetics section.
+My current overarching research thrust is to develop robot systems that can leverage complex material and sensing architectures to improve task performance. The end goal is to create robots that, like humans, are not afraid of bumping into the world in unexpected ways. Ongoing work centers around the design and development of manufacturing approaches to tightly integrate sensing with traditional engineering materials and materials to more closely mimic soft tissue. Most robots shown on this website exhibit this paradigm in some fashion. 
 
 
 ![preview](hitting_2.gif)

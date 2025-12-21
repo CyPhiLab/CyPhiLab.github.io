@@ -5,9 +5,7 @@
 
 ## Journal Articles
 
-**9.** **Zach J. Patterson**, Henry C. Astley, Carmel Majidi, "Soft robotic brittle star shows the influence of mass distribution on underwater walking." *Bioinspiration & Biomimetics*, March 2025. [DOI](https://doi.org/10.1088/1748-3190/adbecb)
-
-**8.** Akua K. Dickson, Juan C. P. Garcia, Meredith L. Anderson, Ran Jing, Sarah Alizadeh-Shabdiz, Audrey X. Wang, Charles DeLorey, **Zach J. Patterson**, Andrew P. Sabelhaus, "Safe Autonomous Environmental Contact for Soft Robots Using Control Barrier Functions." *IEEE Robotics and Automation Letters*, November 2025. [DOI](https://doi.org/10.1109/lra.2025.3609669)
+**8.** **Zach J. Patterson**, Henry C. Astley, Carmel Majidi, "Soft robotic brittle star shows the influence of mass distribution on underwater walking." *Bioinspiration & Biomimetics*, March 2025. [DOI](https://doi.org/10.1088/1748-3190/adbecb)
 
 **7.** Andrew P. Sabelhaus, **Zach J. Patterson**, Anthony T. Wertz, Carmel Majidi, "Safe Supervisory Control of Soft Robot Actuators." *Soft Robotics*, August 2024. [DOI](https://doi.org/10.1089/soro.2022.0131)
 
@@ -43,7 +41,9 @@
 
 ## Preprints
 
-**2.** Maximilian Stölzle, T. K. Rusch, **Zach J. Patterson**, Rodrigo Pérez-Dattari, Francesco Stella, Josie Hughes, Cosimo Della Santina, Daniela Rus, "Learning to Move in Rhythm: Task-Conditioned Motion Policies with Orbital Stability Guarantees." *arXiv preprint arXiv:ARXIV.2507.10602*, 2025. [DOI](https://doi.org/10.48550/ARXIV.2507.10602)
+**3.** Maximilian Stölzle, T. K. Rusch, **Zach J. Patterson**, Rodrigo Pérez-Dattari, Francesco Stella, Josie Hughes, Cosimo Della Santina, Daniela Rus, "Learning to Move in Rhythm: Task-Conditioned Motion Policies with Orbital Stability Guarantees." *arXiv preprint arXiv:ARXIV.2507.10602*, 2025. [DOI](https://doi.org/10.48550/ARXIV.2507.10602)
+
+**2.** Akua K. Dickson, Juan C. P. Garcia, Meredith L. Anderson, Ran Jing, Sarah Alizadeh-Shabdiz, Audrey X. Wang, Charles DeLorey, **Zach J. Patterson**, Andrew P. Sabelhaus, "Safe Autonomous Environmental Contact for Soft Robots using Control Barrier Functions." *arXiv preprint arXiv:ARXIV.2504.14755*, 2025. [DOI](https://doi.org/10.48550/ARXIV.2504.14755)
 
 **1.** **Zach J. Patterson**, Emily Sologuren, Cosimo Della Santina, Daniela Rus, "Design and Control of Modular Soft-Rigid Hybrid Manipulators with Self-Contact." *arXiv preprint arXiv:ARXIV.2408.09275*, 2024. [DOI](https://doi.org/10.48550/ARXIV.2408.09275)
 

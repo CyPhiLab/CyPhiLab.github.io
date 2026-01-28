@@ -80,6 +80,7 @@ Email: [zpatt@case.edu](mailto:zpatt@case.edu) | Phone: (814) 329-8242
 
 ## Invited Talks + Presentations
 
+- From Fossils to Field Robots: Echinoderm Mechanics and Sea-Turtle Autonomy, *Materials Science and Engineering Seminar*, Case Western, October 2025
 - Chair, Robot Locomotion Session, RoboSoft 2025
 - Design and Control of Soft-Rigid Hybrid Robots, *Harvard Microrobotics Lab Seminar*, Harvard, July 2024
 - Blending Soft and Rigid Structures for Physical Intelligence in Robotics, *Mechanical Engineering Departmental Seminar*, Case Western, April 2024
@@ -88,11 +89,11 @@ Email: [zpatt@case.edu](mailto:zpatt@case.edu) | Phone: (814) 329-8242
 - Blending Soft and Rigid Structures for Physical Intelligence in Robotics, *Mechanical Engineering Seminar*, University of Southern California, Feb. 2024
 - Blending Soft and Rigid Structures for Physical Intelligence in Robotics, *Mechanical Engineering Departmental Seminar*, University of Tennessee, Feb. 2024
 - Physical Intelligence and Control for Soft Robotics, *Soft Robotics Course*, University of Michigan, Feb. 2024
-- Towards Interaction Safe Soft-Rigid Hybrid Robots *Action Lab Seminar*, Northeastern University, Dec. 2023
-- Understanding Embodied Intelligence with Comparative Biomechanics and Control Theory *Mechanical Engineering Department Seminar*, UMass Amherst, Sep. 2023
-- "Understanding, Modeling, and Controlling Embodied Intelligence." *EPFL Create Lab*, EPFL, July 2023
-- "Soft Robot Simulation and Control." *Soft Robots: Mechanics, Design and Modeling Course*, Carnegie Mellon, March 2022
-- "Biomimetic Approaches to Robot Design." *Conversations on Bioinspired Materials*, UC Berkeley, Feb. 2021
+- Towards Interaction Safe Soft-Rigid Hybrid Robots, *Action Lab Seminar*, Northeastern University, Dec. 2023
+- Understanding Embodied Intelligence with Comparative Biomechanics and Control Theory *Mechanical, Engineering Department Seminar*, UMass Amherst, Sep. 2023
+- Understanding, Modeling, and Controlling Embodied Intelligence, *EPFL Create Lab*, EPFL, July 2023
+- Soft Robot Simulation and Control, *Soft Robots: Mechanics, Design and Modeling Course*, Carnegie Mellon, March 2022
+- Biomimetic Approaches to Robot Design, *Conversations on Bioinspired Materials*, UC Berkeley, Feb. 2021
 
 ## Reviewer for Journals and Conferences
 
@@ -104,6 +105,8 @@ Email: [zpatt@case.edu](mailto:zpatt@case.edu) | Phone: (814) 329-8242
 - IEEE International Conference on Soft Robotics (RoboSoft)
 - Nature Scientific Reports
 - Soft Robotics
+- Advanced Intelligent Systems
+- Nature Portfolio Journal of Robotics
 
 ## Teaching
 
@@ -114,7 +117,6 @@ Email: [zpatt@case.edu](mailto:zpatt@case.edu) | Phone: (814) 329-8242
 
 **Spring 2025 | EMAE 485, Nonlinear Dynamics and Control**
 - Graduate level course in control theory blending the classical and the modern with a focus on robotics. See the course website: [https://nonlinear-control-emae-485.github.io/](https://nonlinear-control-emae-485.github.io/)
-- 4.71/5.0 avg evaluation
 
 
 ## Media

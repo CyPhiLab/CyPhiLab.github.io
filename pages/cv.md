@@ -80,6 +80,7 @@ Email: [zpatt@case.edu](mailto:zpatt@case.edu) | Phone: (814) 329-8242
 
 ## Invited Talks + Presentations
 
+- From Fossils to Field Robots: Echinoderm Mechanics and Sea-Turtle Autonomy, *Materials Science and Engineering Seminar*, Case Western, October 2025
 - Chair, Robot Locomotion Session, RoboSoft 2025
 - Design and Control of Soft-Rigid Hybrid Robots, *Harvard Microrobotics Lab Seminar*, Harvard, July 2024
 - Blending Soft and Rigid Structures for Physical Intelligence in Robotics, *Mechanical Engineering Departmental Seminar*, Case Western, April 2024
@@ -114,7 +115,7 @@ Email: [zpatt@case.edu](mailto:zpatt@case.edu) | Phone: (814) 329-8242
 **Fall 2025 | EMAE 285, Mechanical Engineering Measurements**
 - Undergraduate level course on applied probability and statistics, measurements, data analysis, and machine learning.
 
-**Spring 2025, 26 | EMAE 485, Nonlinear Dynamics and Control**
+**Spring 2025 | EMAE 485, Nonlinear Dynamics and Control**
 - Graduate level course in control theory blending the classical and the modern with a focus on robotics. See the course website: [https://nonlinear-control-emae-485.github.io/](https://nonlinear-control-emae-485.github.io/)
 
 

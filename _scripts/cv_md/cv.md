@@ -103,6 +103,7 @@ Email: [zpatt@case.edu](mailto:zpatt@case.edu) | Phone: (814) 329-8242
 - IEEE Transactions on Automation Science and Engineering (T-ASE)
 - IEEE Robotics and Automation Letters (RAL)
 - IEEE International Conference on Soft Robotics (RoboSoft)
+- IEEE Transactions on Biomedical Circuits and Systems
 - Nature Scientific Reports
 - Soft Robotics
 - Advanced Intelligent Systems
@@ -133,4 +134,4 @@ Email: [zpatt@case.edu](mailto:zpatt@case.edu) | Phone: (814) 329-8242
 ---
 *For the most up to date publication list, see Google Scholar [https://scholar.google.com/citations?user=wDqCShMAAAAJ&hl=en&oi=ao](https://scholar.google.com/citations?user=wDqCShMAAAAJ&hl=en&oi=ao)*
 
-*CV last updated: January 27, 2026*
+*CV last updated: January 28, 2026*

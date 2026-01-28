@@ -3,7 +3,9 @@
 
 ## Conference Papers
 
-**6.** **Zach J. Patterson**, Emily R. Sologuren, Daniela Rus, "Design of Trimmed Helicoid Soft-Rigid Hybrid Robots." *2025 IEEE 8th International Conference on Soft Robotics (RoboSoft)*, April 2025. [DOI](https://doi.org/10.1109/robosoft63089.2025.11020854)
+**7.** **Zach J. Patterson**, Emily R. Sologuren, Daniela Rus, "Design of Trimmed Helicoid Soft-Rigid Hybrid Robots." *2025 IEEE 8th International Conference on Soft Robotics (RoboSoft)*, April 2025. [DOI](https://doi.org/10.1109/robosoft63089.2025.11020854)
+
+**6.** Makram Chahine, T. K. Rusch, **Zach J. Patterson**, Daniela Rus, "Improving Efficiency of Sampling-based Motion Planning via Message-Passing Monte Carlo." *Proceedings of The 9th Conference on Robot Learning*, 2025
 
 **5.** **Zach J. Patterson**, Cosimo D. Santina, Daniela Rus, "Modeling and Control of Intrinsically Elasticity Coupled Soft-Rigid Robots." *2024 IEEE International Conference on Robotics and Automation (ICRA)*, May 2024. [DOI](https://doi.org/10.1109/icra57147.2024.10610229)
 

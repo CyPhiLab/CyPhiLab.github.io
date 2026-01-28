@@ -83,6 +83,89 @@ def doi_from_work(summary):
     for ext in summary.get("external-ids", {}).get("external-id", []):
         if ext["external-id-type"] == "doi":
             return ext["external-id-value"].lower()
+        
+def url_from_work(summary):
+    """Extract URL from ORCID work summary."""
+    # print(summary)
+    for ext in summary.get("external-ids", {}).get("external-id", []):
+        if ext["external-id-type"] == "uri":
+            return ext["external-id-value"]
+
+def get_orcid_work_details(orcid_id, put_code):
+    """Fetch detailed information for a specific ORCID work."""
+    url = f"https://pub.orcid.org/v3.0/{orcid_id}/work/{put_code}"
+    r = requests.get(url, headers={"Accept": "application/json"})
+    r.raise_for_status()
+    return r.json()
+
+def create_manual_entry_from_orcid(work_detail, key_override):
+    """Create a manual BibTeX entry from ORCID work details when no DOI is available."""
+    # Extract basic information
+    title = work_detail.get("title", {}).get("title", {}).get("value", "Unknown Title")
+    
+    # Extract publication year
+    pub_date = work_detail.get("publication-date")
+    year = "2024"  # default
+    if pub_date:
+        if pub_date.get("year"):
+            year = str(pub_date["year"]["value"])
+    
+    # Extract journal/conference info
+    journal_title = work_detail.get("journal-title")
+    venue = "Unknown Venue"
+    if journal_title:
+        venue = journal_title.get("value", "Unknown Venue")
+    
+    # Extract authors from contributors
+    authors = []
+    contributors = work_detail.get("contributors", {}).get("contributor", [])
+    if contributors:
+        for contributor in contributors:
+            credit_name = contributor.get("credit-name")
+            if credit_name:
+                author_name = credit_name.get("value", "")
+                if author_name:
+                    authors.append(author_name)
+    
+    # If no contributors found, try to get from the ORCID holder's name
+    if not authors:
+        # Fallback: just use a placeholder that user will need to manually update
+        authors = ["Author names need manual entry"]
+        logging.warning(f"No author information found for '{title}' - manual update needed")
+    
+    authors_str = " and ".join(authors)
+    
+    # Determine entry type based on venue name
+    venue_lower = venue.lower()
+    if any(conf in venue_lower for conf in ["conference", "corl", "workshop", "symposium", "proceedings"]):
+        entry_type = "inproceedings"
+        fields = {
+            "title": title,
+            "author": authors_str,
+            "booktitle": venue,
+            "year": year,
+            "note": "Manual entry from ORCID data"
+        }
+    else:
+        entry_type = "article"
+        fields = {
+            "title": title,
+            "author": authors_str,
+            "journal": venue,
+            "year": year,
+            "note": "Manual entry from ORCID data"
+        }
+    
+    # Add URL if available
+    url = work_detail.get("url", {}).get("value") if work_detail.get("url") else None
+    if url:
+        fields["url"] = url
+    
+    # Create pybtex Entry
+    entry = Entry(entry_type, fields=fields)
+    entry.key = key_override
+    
+    return entry
 
 def bibtex_from_doi(doi):
     """Fetch BibTeX metadata from CrossRef via DOI."""
@@ -524,16 +607,29 @@ def main():
     for grp in get_orcid_works(ORCID_ID):
         summ  = grp["work-summary"][0]
         title = summ.get("title", {}).get("title", {}).get("value", "NO TITLE")
+        put_code = summ.get("put-code")
         doi   = doi_from_work(summ)
-        if not doi:
-            logging.debug(f"NO DOI → skip: {title}")
-            continue
-        bib   = bibtex_from_doi(doi)
-        if not bib:
-            continue
-        key   = make_bibkey_from_doi(doi)
-        entry = parse_bib(bib, key)
-        entries[key] = entry
+        
+        if doi is not None:
+            # Standard DOI-based processing
+            logging.info(f"Processing work with DOI: {title}")
+            bib = bibtex_from_doi(doi)
+            if bib:
+                key = make_bibkey_from_doi(doi)
+                entry = parse_bib(bib, key)
+                entries[key] = entry
+        else:
+            # No DOI available - create manual entry from ORCID data
+            logging.info(f"No DOI found for '{title}' - creating manual entry from ORCID data")
+            try:
+                work_detail = get_orcid_work_details(ORCID_ID, put_code)
+                key = norm(title)[:40] or "unknown"
+                entry = create_manual_entry_from_orcid(work_detail, key)
+                entries[key] = entry
+                logging.info(f"Created manual entry {entry} for: {title}")
+            except Exception as e:
+                logging.warning(f"Failed to create manual entry for '{title}': {e}")
+        
         time.sleep(1)  # Be polite to APIs
 
     # --- 2. Deduplicate and categorize entries ---
@@ -549,7 +645,7 @@ def main():
     for k, e in entries.items():
         title = e.fields.get("title", "NO TITLE")
         logging.debug(f"Categorizing: {title}")
-        
+        # logging.info(f"Entry type: {e.type}, fields: {e.fields}")
         # Book chapters
         if e.type.lower() in {"inbook", "incollection", "book"}:
             books[k] = e

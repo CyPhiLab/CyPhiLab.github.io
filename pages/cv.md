@@ -33,7 +33,9 @@ Email: [zpatt@case.edu](mailto:zpatt@case.edu) | Phone: (814) 329-8242
 <!-- PUBLICATIONS_START -->
 ## Journal Articles
 
-**8.** **Zach J. Patterson**, Henry C. Astley, Carmel Majidi, "Soft robotic brittle star shows the influence of mass distribution on underwater walking." *Bioinspiration & Biomimetics*, March 2025. [DOI](https://doi.org/10.1088/1748-3190/adbecb)
+**9.** **Zach J. Patterson**, Henry C. Astley, Carmel Majidi, "Soft robotic brittle star shows the influence of mass distribution on underwater walking." *Bioinspiration & Biomimetics*, March 2025. [DOI](https://doi.org/10.1088/1748-3190/adbecb)
+
+**8.** Akua K. Dickson, Juan C. P. Garcia, Meredith L. Anderson, Ran Jing, Sarah Alizadeh-Shabdiz, Audrey X. Wang, Charles DeLorey, **Zach J. Patterson**, Andrew P. Sabelhaus, "Safe Autonomous Environmental Contact for Soft Robots Using Control Barrier Functions." *IEEE Robotics and Automation Letters*, November 2025. [DOI](https://doi.org/10.1109/lra.2025.3609669)
 
 **7.** Andrew P. Sabelhaus, **Zach J. Patterson**, Anthony T. Wertz, Carmel Majidi, "Safe Supervisory Control of Soft Robot Actuators." *Soft Robotics*, August 2024. [DOI](https://doi.org/10.1089/soro.2022.0131)
 
@@ -51,7 +53,9 @@ Email: [zpatt@case.edu](mailto:zpatt@case.edu) | Phone: (814) 329-8242
 
 ## Conference Papers
 
-**6.** **Zach J. Patterson**, Emily R. Sologuren, Daniela Rus, "Design of Trimmed Helicoid Soft-Rigid Hybrid Robots." *2025 IEEE 8th International Conference on Soft Robotics (RoboSoft)*, April 2025. [DOI](https://doi.org/10.1109/robosoft63089.2025.11020854)
+**7.** **Zach J. Patterson**, Emily R. Sologuren, Daniela Rus, "Design of Trimmed Helicoid Soft-Rigid Hybrid Robots." *2025 IEEE 8th International Conference on Soft Robotics (RoboSoft)*, April 2025. [DOI](https://doi.org/10.1109/robosoft63089.2025.11020854)
+
+**6.** Makram Chahine, T. K. Rusch, **Zach J. Patterson**, Daniela Rus, "Improving Efficiency of Sampling-based Motion Planning via Message-Passing Monte Carlo." *Proceedings of The 9th Conference on Robot Learning*, 2025
 
 **5.** **Zach J. Patterson**, Cosimo D. Santina, Daniela Rus, "Modeling and Control of Intrinsically Elasticity Coupled Soft-Rigid Robots." *2024 IEEE International Conference on Robotics and Automation (ICRA)*, May 2024. [DOI](https://doi.org/10.1109/icra57147.2024.10610229)
 
@@ -69,9 +73,7 @@ Email: [zpatt@case.edu](mailto:zpatt@case.edu) | Phone: (814) 329-8242
 
 ## Preprints
 
-**3.** Maximilian Stölzle, T. K. Rusch, **Zach J. Patterson**, Rodrigo Pérez-Dattari, Francesco Stella, Josie Hughes, Cosimo Della Santina, Daniela Rus, "Learning to Move in Rhythm: Task-Conditioned Motion Policies with Orbital Stability Guarantees." *arXiv preprint arXiv:ARXIV.2507.10602*, 2025. [DOI](https://doi.org/10.48550/ARXIV.2507.10602)
-
-**2.** Akua K. Dickson, Juan C. P. Garcia, Meredith L. Anderson, Ran Jing, Sarah Alizadeh-Shabdiz, Audrey X. Wang, Charles DeLorey, **Zach J. Patterson**, Andrew P. Sabelhaus, "Safe Autonomous Environmental Contact for Soft Robots using Control Barrier Functions." *arXiv preprint arXiv:ARXIV.2504.14755*, 2025. [DOI](https://doi.org/10.48550/ARXIV.2504.14755)
+**2.** Maximilian Stölzle, T. K. Rusch, **Zach J. Patterson**, Rodrigo Pérez-Dattari, Francesco Stella, Josie Hughes, Cosimo Della Santina, Daniela Rus, "Learning to Move in Rhythm: Task-Conditioned Motion Policies with Orbital Stability Guarantees." *arXiv preprint arXiv:ARXIV.2507.10602*, 2025. [DOI](https://doi.org/10.48550/ARXIV.2507.10602)
 
 **1.** **Zach J. Patterson**, Emily Sologuren, Cosimo Della Santina, Daniela Rus, "Design and Control of Modular Soft-Rigid Hybrid Manipulators with Self-Contact." *arXiv preprint arXiv:ARXIV.2408.09275*, 2024. [DOI](https://doi.org/10.48550/ARXIV.2408.09275)
 <!-- PUBLICATIONS_END -->
@@ -86,11 +88,11 @@ Email: [zpatt@case.edu](mailto:zpatt@case.edu) | Phone: (814) 329-8242
 - Blending Soft and Rigid Structures for Physical Intelligence in Robotics, *Mechanical Engineering Seminar*, University of Southern California, Feb. 2024
 - Blending Soft and Rigid Structures for Physical Intelligence in Robotics, *Mechanical Engineering Departmental Seminar*, University of Tennessee, Feb. 2024
 - Physical Intelligence and Control for Soft Robotics, *Soft Robotics Course*, University of Michigan, Feb. 2024
-- Towards Interaction Safe Soft-Rigid Hybrid Robots *Action Lab Seminar*, Northeastern University, Dec. 2023
-- Understanding Embodied Intelligence with Comparative Biomechanics and Control Theory *Mechanical Engineering Department Seminar*, UMass Amherst, Sep. 2023
-- "Understanding, Modeling, and Controlling Embodied Intelligence." *EPFL Create Lab*, EPFL, July 2023
-- "Soft Robot Simulation and Control." *Soft Robots: Mechanics, Design and Modeling Course*, Carnegie Mellon, March 2022
-- "Biomimetic Approaches to Robot Design." *Conversations on Bioinspired Materials*, UC Berkeley, Feb. 2021
+- Towards Interaction Safe Soft-Rigid Hybrid Robots, *Action Lab Seminar*, Northeastern University, Dec. 2023
+- Understanding Embodied Intelligence with Comparative Biomechanics and Control Theory *Mechanical, Engineering Department Seminar*, UMass Amherst, Sep. 2023
+- Understanding, Modeling, and Controlling Embodied Intelligence, *EPFL Create Lab*, EPFL, July 2023
+- Soft Robot Simulation and Control, *Soft Robots: Mechanics, Design and Modeling Course*, Carnegie Mellon, March 2022
+- Biomimetic Approaches to Robot Design, *Conversations on Bioinspired Materials*, UC Berkeley, Feb. 2021
 
 ## Reviewer for Journals and Conferences
 
@@ -102,6 +104,8 @@ Email: [zpatt@case.edu](mailto:zpatt@case.edu) | Phone: (814) 329-8242
 - IEEE International Conference on Soft Robotics (RoboSoft)
 - Nature Scientific Reports
 - Soft Robotics
+- Advanced Intelligent Systems
+- Nature Portfolio Journal of Robotics
 
 ## Teaching
 
@@ -110,9 +114,8 @@ Email: [zpatt@case.edu](mailto:zpatt@case.edu) | Phone: (814) 329-8242
 **Fall 2025 | EMAE 285, Mechanical Engineering Measurements**
 - Undergraduate level course on applied probability and statistics, measurements, data analysis, and machine learning.
 
-**Spring 2025 | EMAE 485, Nonlinear Dynamics and Control**
+**Spring 2025, 26 | EMAE 485, Nonlinear Dynamics and Control**
 - Graduate level course in control theory blending the classical and the modern with a focus on robotics. See the course website: [https://nonlinear-control-emae-485.github.io/](https://nonlinear-control-emae-485.github.io/)
-- 4.71/5.0 avg evaluation
 
 
 ## Media
@@ -129,4 +132,4 @@ Email: [zpatt@case.edu](mailto:zpatt@case.edu) | Phone: (814) 329-8242
 ---
 *For the most up to date publication list, see Google Scholar [https://scholar.google.com/citations?user=wDqCShMAAAAJ&hl=en&oi=ao](https://scholar.google.com/citations?user=wDqCShMAAAAJ&hl=en&oi=ao)*
 
-*CV last updated: January 25, 2026*
+*CV last updated: January 27, 2026*

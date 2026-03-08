@@ -3,6 +3,8 @@
 
 ## Preprints
 
+**3.** **Zach J. Patterson**, Emily Sologuren, Levi Cai, Daniel Kim, Alaa Maalouf, Pascal Spino, Daniela Rus, "Autonomous Sea Turtle Robot for Marine Fieldwork." *arXiv preprint arXiv:ARXIV.2602.21389*, 2026. [DOI](https://doi.org/10.48550/ARXIV.2602.21389)
+
 **2.** Maximilian Stölzle, T. K. Rusch, **Zach J. Patterson**, Rodrigo Pérez-Dattari, Francesco Stella, Josie Hughes, Cosimo Della Santina, Daniela Rus, "Learning to Move in Rhythm: Task-Conditioned Motion Policies with Orbital Stability Guarantees." *arXiv preprint arXiv:ARXIV.2507.10602*, 2025. [DOI](https://doi.org/10.48550/ARXIV.2507.10602)
 
 **1.** **Zach J. Patterson**, Emily Sologuren, Cosimo Della Santina, Daniela Rus, "Design and Control of Modular Soft-Rigid Hybrid Manipulators with Self-Contact." *arXiv preprint arXiv:ARXIV.2408.09275*, 2024. [DOI](https://doi.org/10.48550/ARXIV.2408.09275)

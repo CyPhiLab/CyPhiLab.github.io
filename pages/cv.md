@@ -7,8 +7,8 @@ permalink: /cv/
 
 # Zach J. Patterson
 
-2049 West 28th Street, Cleveland OH, 44113  
-Email: [zpatt@case.edu](mailto:zpatt@case.edu) | Phone: (814) 329-8242
+11000 Cedar Avenue, BioEnterprise 306, Cleveland OH, 44106
+Email: [zpatt@case.edu](mailto:zpatt@case.edu)
 
 ## Professional Experience
 

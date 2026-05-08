@@ -29,6 +29,7 @@ Email: [zpatt@case.edu](mailto:zpatt@case.edu) | Phone: (814) 329-8242
 
 ## Invited Talks + Presentations
 
+- Sea Turtle Robot Demo, *Amazon MARS presented by Jeff Bezos*, March 2026
 - From Fossils to Field Robots: Echinoderm Mechanics and Sea-Turtle Autonomy, *Materials Science and Engineering Seminar*, Case Western, October 2025
 - Chair, Robot Locomotion Session, RoboSoft 2025
 - Design and Control of Soft-Rigid Hybrid Robots, *Harvard Microrobotics Lab Seminar*, Harvard, July 2024
@@ -44,8 +45,9 @@ Email: [zpatt@case.edu](mailto:zpatt@case.edu) | Phone: (814) 329-8242
 - Soft Robot Simulation and Control, *Soft Robots: Mechanics, Design and Modeling Course*, Carnegie Mellon, March 2022
 - Biomimetic Approaches to Robot Design, *Conversations on Bioinspired Materials*, UC Berkeley, Feb. 2021
 
-## Reviewer for Journals and Conferences
+## Reviewer and Associate Editor for Journals and Conferences
 
+- Associate editor for IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)
 - IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)
 - IEEE International Conference on Robotics and Automation (ICRA)
 - IEEE Transactions on Robotics (T-RO)
@@ -53,6 +55,8 @@ Email: [zpatt@case.edu](mailto:zpatt@case.edu) | Phone: (814) 329-8242
 - IEEE Robotics and Automation Letters (RAL)
 - IEEE International Conference on Soft Robotics (RoboSoft)
 - IEEE Transactions on Biomedical Circuits and Systems
+- IEEE Transactions on Biomedical Engineering (TBME)
+- International Journal of Robotics Research (IJRR)
 - Nature Scientific Reports
 - Soft Robotics
 - Advanced Intelligent Systems

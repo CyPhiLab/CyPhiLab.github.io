@@ -45,7 +45,9 @@
 
 ## Preprints
 
-**3.** **Zach J. Patterson**, Emily Sologuren, Levi Cai, Daniel Kim, Alaa Maalouf, Pascal Spino, Daniela Rus, "Autonomous Sea Turtle Robot for Marine Fieldwork." *arXiv preprint arXiv:ARXIV.2602.21389*, 2026. [DOI](https://doi.org/10.48550/ARXIV.2602.21389)
+**4.** **Zach J. Patterson**, Emily Sologuren, Levi Cai, Daniel Kim, Alaa Maalouf, Pascal Spino, Daniela Rus, "Autonomous Sea Turtle Robot for Marine Fieldwork." *arXiv preprint arXiv:ARXIV.2602.21389*, 2026. [DOI](https://doi.org/10.48550/ARXIV.2602.21389)
+
+**3.** Huy Pham, **Zach J. Patterson**, "Control Lyapunov Functions for Underactuated Soft Robots." *arXiv preprint arXiv:ARXIV.2603.05638*, 2026. [DOI](https://doi.org/10.48550/ARXIV.2603.05638)
 
 **2.** Maximilian Stölzle, T. K. Rusch, **Zach J. Patterson**, Rodrigo Pérez-Dattari, Francesco Stella, Josie Hughes, Cosimo Della Santina, Daniela Rus, "Learning to Move in Rhythm: Task-Conditioned Motion Policies with Orbital Stability Guarantees." *arXiv preprint arXiv:ARXIV.2507.10602*, 2025. [DOI](https://doi.org/10.48550/ARXIV.2507.10602)
 

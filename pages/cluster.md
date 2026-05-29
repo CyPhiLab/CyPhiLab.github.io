@@ -128,7 +128,7 @@ scancel <job_id>
 
 ## Example Batch Script
 
-Below is the structure of the included example job, [`ppo_training_example.sh`](_scripts/ppo_training_example.sh).
+Below is the structure of the included example job, [`ppo_training_example.sh`](https://github.com/CyPhiLab/CyPhiLab.github.io/blob/main/assets/ppo_training_example.sh).
 
 ```bash
 #!/bin/bash

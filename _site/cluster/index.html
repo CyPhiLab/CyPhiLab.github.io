@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+
+<!--
+  portfolYOU Jekyll theme by yousinix
+  Free for personal and commercial use under the MIT license
+  https://github.com/yousinix/portfolYOU
+-->
+
+<html lang="en" class="h-100">
+
+<head>
+
+  
+  
+  
+
+  
+
+  
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Cluster">
+  <meta property="og:description" content="Robotics Lab at Case Western Reserve University">
+  <meta property="og:image" content="cyphi_landing.png">
+  
+  <title>Cluster</title>
+  <meta name="description" content="Robotics Lab at Case Western Reserve University">
+
+  <link rel="shortcut icon" type="image/x-icon" href="/assets/favicon.ico">
+
+  <!-- Theme style -->
+  <script src="/assets/js/theme.js"></script>
+
+  <!-- Font Awesome CDN -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
+
+  <!-- Bootstrap CSS CDN -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
+
+  <!-- Animate CSS CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.css">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="/assets/css/style.css">
+
+</head>
+
+
+<body class="h-100 d-flex flex-column">
+
+  <main class="flex-shrink-0 container mt-5">
+    
+<nav class="navbar navbar-expand-lg navbar-themed">
+
+    <a class="navbar-brand d-flex align-items-center" href="/">
+        <img src="/logo_bw.png" alt="Site Logo" class="logo-img mr-2">
+        <h5 class="mb-0"><b>CyPhiLab</b></h5>
+    </a>  
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <i class="fas fa-1x fa-bars text-themed"></i>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav ml-auto"><a class="nav-item nav-link " href="/about/">About</a>
+  
+        <a class="nav-item nav-link " href="/members/">Members</a>
+  
+        <a class="nav-item nav-link " href="/projects/">Research</a>
+  
+        <a class="nav-item nav-link " href="/students/">Prospective Students</a>
+  
+        
+  
+        <span id="theme-toggler" class="nav-item nav-link" role="button" onclick="toggleTheme()"></span>
+      </div>
+    </div>
+  
+  </nav>
+  
+    <p><br /></p>
+
+<h1 id="cyphilab-hpc-quickstart-guide">CyPhiLab HPC Quickstart Guide</h1>
+
+<p>This page is a lab-facing quick reference for getting onto the cluster, starting work on compute nodes, and running jobs through Slurm. It is not a full replacement for the official HPC documentation, but it should cover the common day-to-day steps.</p>
+
+<p>Official HPC docs: https://sites.google.com/a/case.edu/hpcc/</p>
+
+<h2 id="what-the-cluster-is">What The Cluster Is</h2>
+
+<p>The cluster gives you access to shared compute resources that are much larger than a laptop or workstation. To use it, we request the resources that we would like to use and how long we would like to use them. The cluster then automatically schedules resource access for users based on an internal queuing system called <a href="https://en.wikipedia.org/wiki/Slurm_Workload_Manager">Slurm</a>. In our experience, all but the most powerful resources are usually available at any given time, but at periods of high demand you may have to wait in line until you are granted access to your requested reources.</p>
+
+<p>For our lab, the common workflow is:</p>
+
+<ol>
+  <li>Connect to the cluster from your laptop.</li>
+  <li>Move into your project directory.</li>
+  <li>Start an interactive session for development or debugging, or submit a batch job for longer training runs.</li>
+</ol>
+
+<h2 id="connecting-to-the-cluster">Connecting To The Cluster</h2>
+
+<h3 id="vpn">VPN</h3>
+
+<p>If off campus, you will need to connect to the Case VPN to access the cluster. This is very easy to use. Please see the Case guide for getting it installed and using it: https://vpnsetup.case.edu/.</p>
+
+<h3 id="terminal-ssh">Terminal SSH</h3>
+
+<p>From a terminal on your laptop:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ssh &lt;your_case_id&gt;@pioneer.case.edu
+</code></pre></div></div>
+
+<p>If your access flow differs, use the hostname and login method provided by the university HPC docs.</p>
+
+<h3 id="vs-code-remote-ssh">VS Code Remote SSH</h3>
+
+<p>VS Code is usually the easiest way to work on the cluster without constantly copying files back and forth. See comprehensive guide <a href="https://code.visualstudio.com/docs/remote/ssh">here</a>.</p>
+
+<ol>
+  <li>Install the <code class="language-plaintext highlighter-rouge">Remote - SSH</code> extension in VS Code.</li>
+  <li>Open the Command Palette (ctrl+shift+P).</li>
+  <li>Run <code class="language-plaintext highlighter-rouge">Remote-SSH: Add New SSH Host...</code>.</li>
+  <li>Enter:</li>
+</ol>
+
+<pre><code class="language-sshconfig">ssh &lt;your_case_id&gt;@pioneer.case.edu
+</code></pre>
+
+<ol>
+  <li>Type your password to connect to host <code class="language-plaintext highlighter-rouge">pioneer</code>.</li>
+  <li>You can then open folders on the remote machine the same way you would normally.</li>
+</ol>
+
+<p>Once connected, you can edit code in VS Code, use the remote terminal, and launch jobs without leaving the editor.</p>
+
+<h2 id="basic-layout-and-expectations">Basic Layout And Expectations</h2>
+
+<p>When your cluster account is created, you are given a home directory and you can create project-specific directories under it. A typical pattern looks like this:</p>
+
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>/home/&lt;your_case_id&gt;/
+</code></pre></div></div>
+
+<h3 id="important-understanding-login-vs-compute-nodes">IMPORTANT: Understanding Login vs Compute Nodes</h3>
+
+<p>When you first log into the cluster, your terminal will look like this: <your_case_id>@hpcX (where X is a number). This means you are on the "login" node. You can edit code, transfer files, and launch jobs from the login node, but you are NOT to run any code on it - it has limited compute resources and doing so can slow things down for other users. If we consistently abuse the login node, our lab could see our HPC privileges demoted.</your_case_id></p>
+
+<p>NOTE: Do not let AI coding assistants (like Copilot or Claude Code) run code on the login node. If they want to test something, they can fire up compute nodes and run on those, or you can manually run code for them.</p>
+
+<h3 id="managing-code-on-the-cluster">Managing code on the cluster</h3>
+
+<p>Just like on your local machine, you always want to make sure you are using proper software management practices. You should log into your GitHub account on the cluster and make sure that you are regularly keeping your commits up to date on the remote repository so that you have a backup in case something goes wrong. When using Python, make sure to use proper package/environment management (i.e uv, conda, etc).</p>
+
+<h2 id="running-jobs-on-the-cluster">Running jobs on the cluster</h2>
+
+<p>There are two types of jobs that you can run on the cluster: interactive and batch jobs. You should use interactive jobs for debugging and development, and then once your job is ready to run for hours, you can dispatch it to a batch job.</p>
+
+<h3 id="interactive-compute-sessions">Interactive Compute Sessions</h3>
+
+<p>Use interactive sessions when you need to interactively run code on a compute node for development, debugging, testing, or short experiments. Note that when you close an interactive session (i.e. by disconnecting from SSH, by your computer going to sleep, by running out of time, etc), whatever code you are running at the time gets cut off.</p>
+
+<p>CPU Interactive Session:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>srun <span class="nt">--pty</span> <span class="nt">--time</span><span class="o">=</span>02:00:00 <span class="nt">--cpus-per-task</span><span class="o">=</span>4 <span class="nt">--mem</span><span class="o">=</span>8G bash
+</code></pre></div></div>
+
+<p>This requests 1 interactive shell with 4 CPU cores and 8 GB RAM for 2 hours.</p>
+
+<h3 id="gpu-interactive-session">GPU Interactive Session</h3>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>srun <span class="nt">-p</span> gpu <span class="nt">--gres</span><span class="o">=</span>gpu:1 <span class="nt">-C</span> gpul40s <span class="nt">--time</span><span class="o">=</span>01:00:00 <span class="nt">--cpus-per-task</span><span class="o">=</span>4 <span class="nt">--mem</span><span class="o">=</span>16G <span class="nt">--pty</span> bash
+</code></pre></div></div>
+
+<p>This requests a node with 1 <code class="language-plaintext highlighter-rouge">L40S</code>-class GPU, 4 CPU cores, and 16GB of RAM for 1 hour.</p>
+
+<h2 id="gpu-notes">GPU Notes</h2>
+
+<p>GPU availability changes over time, and the best source for live information is the <a href="https://ondemand-pioneer.case.edu/public/sinfo_pioneer.html">Pioneer cluster status page</a>, which tells you what resources are currently available. There are many different GPUs availability on the cluster, and you can request different ones depending on how computationally demanding your needs are. Typically, better GPUs are in higher demand and thus you are more likely to have to wait to use them. At the time of writing, here are the various GPUs available in order of increasing compute: <code class="language-plaintext highlighter-rouge">gpup100</code>, <code class="language-plaintext highlighter-rouge">gpu2080</code>, <code class="language-plaintext highlighter-rouge">gpu2080,rds</code>, <code class="language-plaintext highlighter-rouge">gpu4v100</code>, <code class="language-plaintext highlighter-rouge">gpu2v100</code>, <code class="language-plaintext highlighter-rouge">gpu2v100,rds</code>, <code class="language-plaintext highlighter-rouge">gpul40s</code>, <code class="language-plaintext highlighter-rouge">gpu2h100</code>, <code class="language-plaintext highlighter-rouge">gpu4090</code>. In our experience, the l40s is a good balance between power and availability.</p>
+
+<h2 id="batch-jobs-with-slurm">Batch Jobs With Slurm</h2>
+
+<p>Batch jobs are where the real value of the cluster comes from. Unlike an interactive job, you don’t have to be logged into the cluster while a batch job is running: you can simply set it to run, log off, and come back later to view the results when the job is finished. This is essential for machine learning workflows because training large neural networks on lots of data usually takes hours to days.</p>
+
+<h3 id="submit-a-job">Submit A Job</h3>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sbatch your_job.sh
+</code></pre></div></div>
+
+<h3 id="check-your-jobs">Check Your Jobs</h3>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>squeue <span class="nt">-u</span> <span class="nv">$USER</span>
+</code></pre></div></div>
+
+<h3 id="cancel-a-job">Cancel A Job</h3>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>scancel &lt;job_id&gt;
+</code></pre></div></div>
+
+<h2 id="example-batch-script">Example Batch Script</h2>
+
+<p>Below is the structure of the included example job, <a href="_scripts/ppo_training_example.sh"><code class="language-plaintext highlighter-rouge">ppo_training_example.sh</code></a>.</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">#!/bin/bash</span>
+<span class="c">#SBATCH --job-name=spirob_mjlab_ppo</span>
+<span class="c">#SBATCH --output=logs/rsl_rl/spirob_hole/%j.out</span>
+<span class="c">#SBATCH --error=logs/rsl_rl/spirob_hole/%j.err</span>
+<span class="c">#SBATCH --partition=gpu</span>
+<span class="c">#SBATCH -C gpul40s</span>
+<span class="c">#SBATCH --cpus-per-task=8</span>
+<span class="c">#SBATCH --nodes=1</span>
+<span class="c">#SBATCH --gres=gpu:1</span>
+<span class="c">#SBATCH --mem=32G</span>
+<span class="c">#SBATCH --time=10:00:00</span>
+</code></pre></div></div>
+
+<p>What those lines mean:</p>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">--job-name</code>: readable name shown in Slurm tools</li>
+  <li><code class="language-plaintext highlighter-rouge">--output</code> and <code class="language-plaintext highlighter-rouge">--error</code>: = log destinations</li>
+  <li><code class="language-plaintext highlighter-rouge">--partition=gpu</code>: run on the GPU queue</li>
+  <li><code class="language-plaintext highlighter-rouge">-C gpul40s</code>: request a node with the <code class="language-plaintext highlighter-rouge">l40s</code> GPU</li>
+  <li><code class="language-plaintext highlighter-rouge">--cpus-per-task=8</code>: allocate 8 CPU cores</li>
+  <li><code class="language-plaintext highlighter-rouge">--nodes=1</code>: keep the job on one node</li>
+  <li><code class="language-plaintext highlighter-rouge">--gres=gpu:1</code>: request 1 GPUs</li>
+  <li><code class="language-plaintext highlighter-rouge">--mem=32G</code>: allocate 32 GB RAM</li>
+  <li><code class="language-plaintext highlighter-rouge">--time=10:00:00</code>: set a 10 hour wall-time limit</li>
+</ul>
+
+<p>The example then does four useful things:</p>
+
+<ol>
+  <li>Loads CUDA.</li>
+  <li>Prints basic job metadata.</li>
+  <li>Changes into the project directory and creates a log folder.</li>
+  <li>Runs a small PyTorch CUDA check before launching training.</li>
+</ol>
+
+<h2 id="recommended-structure-for-your-own-job-scripts">Recommended Structure For Your Own Job Scripts</h2>
+
+<p>Use this as a starting template:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">#!/bin/bash</span>
+<span class="c">#SBATCH --job-name=my_job</span>
+<span class="c">#SBATCH --output=logs/%j.out</span>
+<span class="c">#SBATCH --error=logs/%j.err</span>
+<span class="c">#SBATCH --partition=gpu</span>
+<span class="c">#SBATCH -C gpul40s</span>
+<span class="c">#SBATCH --cpus-per-task=8</span>
+<span class="c">#SBATCH --nodes=1</span>
+<span class="c">#SBATCH --gres=gpu:1</span>
+<span class="c">#SBATCH --mem=32G</span>
+<span class="c">#SBATCH --time=04:00:00</span>
+
+<span class="nb">set</span> <span class="nt">-e</span>
+
+module load CUDA/12.8.0
+
+<span class="nb">cd</span> /home/&lt;your_case_id&gt;/&lt;your_project&gt;
+<span class="nb">mkdir</span> <span class="nt">-p</span> logs
+
+<span class="nb">echo</span> <span class="s2">"Job ID: </span><span class="nv">$SLURM_JOB_ID</span><span class="s2">"</span>
+<span class="nb">echo</span> <span class="s2">"Node: </span><span class="nv">$HOSTNAME</span><span class="s2">"</span>
+<span class="nb">echo</span> <span class="s2">"Date: </span><span class="si">$(</span><span class="nb">date</span><span class="si">)</span><span class="s2">"</span>
+
+nvidia-smi
+
+<span class="c"># Replace with your actual command</span>
+python train.py
+</code></pre></div></div>
+
+<p>Adjust CPU count, RAM, runtime, and GPU to match the actual job. One way to speed up your job is to request to GPUs at a time by changing to #SBATCH –gres=gpu:2. However, your code specifically needs to be set up to utilize a multi-GPU setup.</p>
+
+<h2 id="useful-slurm-commands">Useful Slurm Commands</h2>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>squeue <span class="nt">-u</span> <span class="nv">$USER</span>
+scontrol show job &lt;job_id&gt;
+sinfo
+<span class="nb">tail</span> <span class="nt">-f</span> logs/&lt;job_id&gt;.out
+<span class="nb">tail</span> <span class="nt">-f</span> logs/&lt;job_id&gt;.err
+</code></pre></div></div>
+
+<p>These cover most debugging needs:</p>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">squeue</code> shows whether your job is pending or running.</li>
+  <li><code class="language-plaintext highlighter-rouge">scontrol show job</code> gives more scheduling detail.</li>
+  <li><code class="language-plaintext highlighter-rouge">sinfo</code> shows partition and node information.</li>
+  <li><code class="language-plaintext highlighter-rouge">tail -f</code> lets you watch logs in real time.</li>
+</ul>
+
+<h2 id="practical-advice">Practical Advice</h2>
+
+<ul>
+  <li>Test with short jobs on an interactive session before launching long runs.</li>
+  <li>Always send stdout and stderr to log files.</li>
+  <li>Print environment information early in the script.</li>
+  <li>Create output directories explicitly with <code class="language-plaintext highlighter-rouge">mkdir -p</code>.</li>
+  <li>If a job is pending for a long time, check whether your requested GPU type is too restrictive.</li>
+</ul>
+
+<h2 id="suggested-first-time-setup-checklist">Suggested First-Time Setup Checklist</h2>
+
+<ol>
+  <li>Confirm you can SSH into Pioneer.</li>
+  <li>Set up VS Code Remote SSH.</li>
+  <li>Find your project directory on the cluster.</li>
+  <li>Run a short CPU interactive session.</li>
+  <li>Run a short GPU interactive session.</li>
+  <li>Copy the example batch script and adapt it for your project.</li>
+  <li>Submit a short test job before submitting a full training run.</li>
+</ol>
+
+
+  </main>
+  <footer class="mt-auto py-3 text-center">
+
+  <small class="text-muted mb-2">
+    <!-- <i class="fas fa-code"></i> with <i class="fas fa-heart"></i> -->
+    <!-- by <strong>Zach Patterson</strong> -->
+    <strong>&Psi;&Phi;Lab</strong>
+  </small>
+
+  <div class="container-fluid justify-content-center"><a class="social mx-1"  href="mailto:zpatt@case.edu"
+       style="color: #6c757d"
+       onMouseOver="this.style.color='#db4437'"
+       onMouseOut="this.style.color='#6c757d'">
+      <i class="fas fa-envelope fa-1x"></i>
+    </a><a class="social mx-1"  href="https://www.github.com/CyPhiLab"
+       style="color: #6c757d"
+       onMouseOver="this.style.color='#333333'"
+       onMouseOut="this.style.color='#6c757d'">
+      <i class="fab fa-github fa-1x"></i>
+    </a><a class="social mx-1"  href="https://www.linkedin.com/in/zpatt"
+       style="color: #6c757d"
+       onMouseOver="this.style.color='#007bb5'"
+       onMouseOut="this.style.color='#6c757d'">
+      <i class="fab fa-linkedin-in fa-1x"></i>
+    </a>
+
+</div>
+
+  <!---->
+  <!-- <small id="attribution">
+    theme <a href="https://github.com/YoussefRaafatNasry/portfolYOU">portfolYOU</a>
+  </small> -->
+
+</footer>
+
+  
+  <!-- GitHub Buttons -->
+<script async defer src="https://buttons.github.io/buttons.js"></script>
+
+<!-- jQuery CDN -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<!-- Popper.js CDN -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
+
+<!-- Bootstrap JS CDN -->
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+<!-- wow.js CDN & Activation -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.js"></script>
+<script> new WOW().init(); </script>
+
+<!-- Initialize all tooltips -->
+<script>
+$(function () {
+    $('[data-toggle="tooltip"]').tooltip()
+})
+</script>
+</body>
+
+</html>

@@ -178,8 +178,52 @@ def bibtex_from_doi(doi):
 # ---------- BibTeX parsing ----------
 from pybtex.database.input import bibtex as _BibParser
 
+_MONTH_MACRO_NORMALIZATIONS = {
+    "jan": "jan",
+    "january": "jan",
+    "feb": "feb",
+    "february": "feb",
+    "mar": "mar",
+    "march": "mar",
+    "apr": "apr",
+    "april": "apr",
+    "may": "may",
+    "jun": "jun",
+    "june": "jun",
+    "jul": "jul",
+    "july": "jul",
+    "aug": "aug",
+    "august": "aug",
+    "sep": "sep",
+    "sept": "sep",
+    "september": "sep",
+    "oct": "oct",
+    "october": "oct",
+    "nov": "nov",
+    "november": "nov",
+    "dec": "dec",
+    "december": "dec",
+}
+
+def normalize_bibtex_month_macros(bibtex_string):
+    """Normalize nonstandard bare month identifiers before pybtex parses them."""
+    month_field_pattern = re.compile(
+        r'(\bmonth\s*=\s*)([A-Za-z]+)(\s*[,}])',
+        re.IGNORECASE,
+    )
+
+    def replace_month(match):
+        prefix, raw_month, suffix = match.groups()
+        normalized_month = _MONTH_MACRO_NORMALIZATIONS.get(raw_month.lower())
+        if normalized_month is None:
+            return match.group(0)
+        return f"{prefix}{normalized_month}{suffix}"
+
+    return month_field_pattern.sub(replace_month, bibtex_string)
+
 def parse_bib(bibtex_string, key_override, force_type=None):
     """Parse one BibTeX record → pybtex Entry, then override its key/type."""
+    bibtex_string = normalize_bibtex_month_macros(bibtex_string)
     parser = _BibParser.Parser()           # new parser per call
     data   = parser.parse_string(bibtex_string)
     entry  = next(iter(data.entries.values()))

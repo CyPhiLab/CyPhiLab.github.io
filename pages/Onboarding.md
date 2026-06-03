@@ -24,6 +24,7 @@ The CyPhiLab is located in the Human Fusions Institute on the 3rd floor of the B
 ## 1. Complete Safety Trainings
 - All lab members must complete the following before beginning work:
     - [Laboratory Safety Training](https://case.edu/ehs/training/laboratory-safety)
+- New graduate students must complete the following as well:
     - [Biosafety Training](https://case.edu/ehs/training/biosafety-training)
 
 <!-- ---

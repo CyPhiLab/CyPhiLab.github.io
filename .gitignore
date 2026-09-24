@@ -1,2 +1,12 @@
+# macOS
 .DS_Store
-.DS_Store
+
+# Jekyll build output and caches (GitHub Pages builds from source)
+_site/
+.jekyll-cache/
+.jekyll-metadata
+.sass-cache/
+
+# Bundler
+.bundle/
+vendor/

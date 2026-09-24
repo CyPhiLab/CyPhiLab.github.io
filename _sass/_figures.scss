@@ -1,0 +1,35 @@
+// Side-by-side figures for project pages.
+// Set --ar (width / height) on each figure so a row lines up at equal heights.
+.figure-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  max-width: 720px;
+  margin: 1.5rem auto;
+
+  figure {
+    flex: var(--ar, 1) 1 0;
+    min-width: 220px;
+    margin: 0;
+  }
+
+  img,
+  video {
+    width: 100%;
+    height: auto;
+  }
+
+  figcaption {
+    font-size: 0.85rem;
+    opacity: 0.8;
+    margin-top: 0.4rem;
+    text-align: center;
+  }
+
+  // Phones: stack figures at full width.
+  @media (max-width: 576px) {
+    figure {
+      flex: 1 1 100%;
+    }
+  }
+}

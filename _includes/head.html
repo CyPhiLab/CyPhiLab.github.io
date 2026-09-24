@@ -41,4 +41,12 @@
   <!-- Custom CSS -->
   <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
 
+  <!-- MathJax (opt-in with `math: true` in front matter; write math as $$...$$) -->
+  {% if page.math %}
+  <script>
+    window.MathJax = { tex: { inlineMath: [['\\(', '\\)']], displayMath: [['\\[', '\\]']] } };
+  </script>
+  <script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+  {% endif %}
+
 </head>

@@ -12,6 +12,9 @@ weight: 4
 # **Research**
 For the most up to date snapshot of output, check out [google scholar](https://scholar.google.com/citations?hl=en&user=wDqCShMAAAAJ&view_op=list_works&sortby=pubdate).
 
+<!-- ## Mechanical Intelligence -->
+{% include projects/index_category.html category="mi" %}
+
 <!-- ## Interaction-safe Robots -->
 {% include projects/index_srh.html %}
 

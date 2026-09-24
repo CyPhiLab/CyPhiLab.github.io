@@ -80,6 +80,7 @@ The CyPhiLab is located in the Human Fusions Institute on the 3rd floor of the B
   - Share your username with Zach.  
 - Recommended setup: **VSCode + GitHub**.  
   - Tutorial: [Using Git with Visual Studio Code](https://learn.microsoft.com/en-us/shows/visual-studio-code/using-git-with-visual-studio-code-official-beginner-tutorial).
+- Read the [Contributing Guide]({{ '/contributing/' | relative_url }}) — it covers how we branch, commit, review, and structure repos in this group.
 
 ---
 
@@ -88,6 +89,7 @@ The CyPhiLab is located in the Human Fusions Institute on the 3rd floor of the B
   - Create an **Onshape account** with your **Case email**: [Onshape Sign-In](https://cad.onshape.com/signin).  
   - Send Zach the email address you used.  
 - All lab CAD work is done in Onshape for **collaboration and version control**.
+- Most engineering CAD education is still stuck in the stone ages. With a few simple practices, modern tools like Onshape make it *much* easier to encode [design intent](https://www.ptc.com/en/blogs/cad/design-intent-explained) into your design. See [this video](https://www.youtube.com/watch?v=kKsVUTRPM3k) and [this one](https://www.youtube.com/watch?v=oFtsF7MyGJY) for quick primers on easily designing multi-part assemblies.
 
 ---
 

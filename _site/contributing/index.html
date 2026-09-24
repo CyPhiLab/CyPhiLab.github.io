@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+
+<!--
+  portfolYOU Jekyll theme by yousinix
+  Free for personal and commercial use under the MIT license
+  https://github.com/yousinix/portfolYOU
+-->
+
+<html lang="en" class="h-100">
+
+<head>
+
+  
+  
+  
+
+  
+
+  
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Contributing">
+  <meta property="og:description" content="Robotics Lab at Case Western Reserve University">
+  <meta property="og:image" content="cyphi_landing.png">
+  
+  <title>Contributing</title>
+  <meta name="description" content="Robotics Lab at Case Western Reserve University">
+
+  <link rel="shortcut icon" type="image/x-icon" href="/assets/favicon.ico">
+
+  <!-- Theme style -->
+  <script src="/assets/js/theme.js"></script>
+
+  <!-- Font Awesome CDN -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
+
+  <!-- Bootstrap CSS CDN -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
+
+  <!-- Animate CSS CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.css">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="/assets/css/style.css">
+
+  <!-- MathJax (opt-in with `math: true` in front matter; write math as $$...$$) -->
+  
+
+</head>
+
+
+<body class="h-100 d-flex flex-column">
+
+  <main class="flex-shrink-0 container mt-5">
+    
+<nav class="navbar navbar-expand-lg navbar-themed">
+
+    <a class="navbar-brand d-flex align-items-center" href="/">
+        <img src="/logo_bw.png" alt="Site Logo" class="logo-img mr-2">
+        <h5 class="mb-0"><b>CyPhiLab</b></h5>
+    </a>  
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <i class="fas fa-1x fa-bars text-themed"></i>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav ml-auto"><a class="nav-item nav-link " href="/about/">About</a>
+  
+        <a class="nav-item nav-link " href="/members/">Members</a>
+  
+        <a class="nav-item nav-link " href="/projects/">Research</a>
+  
+        <a class="nav-item nav-link " href="/students/">Prospective Students</a>
+  
+        
+  
+        <span id="theme-toggler" class="nav-item nav-link" role="button" onclick="toggleTheme()"></span>
+      </div>
+    </div>
+  
+  </nav>
+  
+    <p><br /></p>
+
+<h1 id="cyphilab-contributing-guide">CyPhiLab Contributing Guide</h1>
+
+<p>This document describes how we use git and GitHub in this group. It’s written for people who know how to code but haven’t necessarily worked in a shared codebase before. Read it once at onboarding, then use it as a reference.</p>
+
+<p>The goal isn’t to make everyone a professional software engineer — it’s to stop the three things that actually cost us time: lost work, code that only runs on one person’s laptop, and nobody knowing why a script does what it does six months later.</p>
+
+<hr />
+
+<h2 id="1-setup-do-this-once">1. Setup (do this once)</h2>
+
+<ol>
+  <li>Install git and create a GitHub account if you don’t have one.</li>
+  <li>Set your identity so commits are attributed to you, not “root” or a laptop name:
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git config <span class="nt">--global</span> user.name <span class="s2">"Your Name"</span>
+git config <span class="nt">--global</span> user.email <span class="s2">"you@case.edu"</span>
+</code></pre></div>    </div>
+  </li>
+  <li>Clone the repo (don’t download a zip):
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git clone git@github.com:&lt;org&gt;/&lt;repo&gt;.git
+</code></pre></div>    </div>
+  </li>
+  <li>Install <a href="https://docs.astral.sh/uv/"><code class="language-plaintext highlighter-rouge">uv</code></a> if you don’t have it (<code class="language-plaintext highlighter-rouge">curl -LsSf https://astral.sh/uv/install.sh | sh</code>), then set up the environment from the repo’s <code class="language-plaintext highlighter-rouge">pyproject.toml</code>:
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">cd</span> &lt;repo&gt;
+uv <span class="nb">sync</span>
+</code></pre></div>    </div>
+    <p>This creates a <code class="language-plaintext highlighter-rouge">.venv</code> and installs the exact pinned versions from <code class="language-plaintext highlighter-rouge">uv.lock</code> — no manual <code class="language-plaintext highlighter-rouge">venv</code>/<code class="language-plaintext highlighter-rouge">pip</code> steps, and no “works on my machine” drift between people’s environments.</p>
+  </li>
+  <li>Run things with <code class="language-plaintext highlighter-rouge">uv run</code>, e.g. <code class="language-plaintext highlighter-rouge">uv run pytest</code> or <code class="language-plaintext highlighter-rouge">uv run scripts/run_simulation.py</code>. This uses the project’s environment automatically, so you don’t need to remember to activate it. (You can still <code class="language-plaintext highlighter-rouge">source .venv/bin/activate</code> if you prefer working that way.)</li>
+  <li>If the repo has a <code class="language-plaintext highlighter-rouge">pre-commit</code> config, install it: <code class="language-plaintext highlighter-rouge">uv run pre-commit install</code>. This auto-formats and lints your code before it’s committed, so style arguments never happen in review.</li>
+</ol>
+
+<hr />
+
+<h2 id="2-repository-structure">2. Repository structure</h2>
+
+<p>Every project in this group should roughly follow:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>project/
+├── src/            # importable code (functions, classes — not scripts)
+├── scripts/        # runnable entry points (e.g. run_simulation.py)
+├── tests/          # pytest tests, mirroring src/ structure
+├── notebooks/      # exploratory Jupyter notebooks (see note below)
+├── docs/           # any long-form documentation
+├── data/           # gitignored — never commit data
+├── pyproject.toml  # project + dependency declarations (uv-managed)
+├── uv.lock         # exact pinned versions — always commit this
+├── README.md
+└── .gitignore
+</code></pre></div></div>
+
+<p><strong>Notebooks</strong>: fine for exploration, but code that other people depend on (analysis functions, plotting utilities, solvers) should be moved into <code class="language-plaintext highlighter-rouge">src/</code> and imported, not copy-pasted between notebooks. A notebook with the same 40-line function pasted into it eight times is the single most common failure mode we’re trying to avoid.</p>
+
+<hr />
+
+<h2 id="3-the-golden-rule-main-always-works">3. The golden rule: <code class="language-plaintext highlighter-rouge">main</code> always works</h2>
+
+<p><code class="language-plaintext highlighter-rouge">main</code> should always be in a state where someone else could clone it and run it. That means:</p>
+
+<ul>
+  <li><strong>Never commit directly to <code class="language-plaintext highlighter-rouge">main</code>.</strong> All work happens on a branch.</li>
+  <li><strong>Never push code to <code class="language-plaintext highlighter-rouge">main</code> that doesn’t run</strong>, even “temporarily.”</li>
+  <li>If you break <code class="language-plaintext highlighter-rouge">main</code> by accident, say so immediately in the group Teams chat — don’t quietly try to fix it. Everyone breaks main eventually; hiding it is the only actual mistake.</li>
+</ul>
+
+<p>We enforce this with a GitHub branch protection rule on <code class="language-plaintext highlighter-rouge">main</code> requiring at least one PR review before merge.</p>
+
+<hr />
+
+<h2 id="4-branching">4. Branching</h2>
+
+<p>Create a new branch for every distinct piece of work:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git checkout main
+git pull                          <span class="c"># make sure you're starting from the latest</span>
+git checkout <span class="nt">-b</span> feature/short-description
+</code></pre></div></div>
+
+<p>Naming convention:</p>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">feature/...</code> — new capability</li>
+  <li><code class="language-plaintext highlighter-rouge">fix/...</code> — bug fix</li>
+  <li><code class="language-plaintext highlighter-rouge">refactor/...</code> — restructuring, no behavior change</li>
+  <li><code class="language-plaintext highlighter-rouge">docs/...</code> — documentation only</li>
+</ul>
+
+<p>Keep branches <strong>short-lived</strong> (days, not months). A branch that lives for six weeks will have a brutal merge at the end. If a project is genuinely big, break it into smaller branches/PRs that each leave <code class="language-plaintext highlighter-rouge">main</code> in a working state.</p>
+
+<hr />
+
+<h2 id="5-commits">5. Commits</h2>
+
+<p>Commit early and often — a commit is a checkpoint you can return to, not a formal ceremony.</p>
+
+<ul>
+  <li><strong>One logical change per commit.</strong> “Fix boundary condition bug” and “add unit conversion helper” should be two commits, not one.</li>
+  <li><strong>Write commit messages in the imperative mood</strong>, like an instruction: <code class="language-plaintext highlighter-rouge">Add convergence check to solver loop</code>, not <code class="language-plaintext highlighter-rouge">Added</code> or <code class="language-plaintext highlighter-rouge">Adding</code>. This matches git’s own conventions and reads cleanly in <code class="language-plaintext highlighter-rouge">git log</code>.</li>
+  <li>Reference an issue number if one exists: <code class="language-plaintext highlighter-rouge">Fix sign error in torque calc (#42)</code>.</li>
+</ul>
+
+<p>Avoid commit messages like <code class="language-plaintext highlighter-rouge">fix</code>, <code class="language-plaintext highlighter-rouge">updates</code>, <code class="language-plaintext highlighter-rouge">asdf</code>, or <code class="language-plaintext highlighter-rouge">final_v2_REAL</code>. If you can’t summarize the change in one line, the commit is probably too big — split it.</p>
+
+<hr />
+
+<h2 id="6-pull-requests">6. Pull requests</h2>
+
+<p>When your branch is ready (or even partway done — see draft PRs below):</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git push <span class="nt">-u</span> origin feature/short-description
+</code></pre></div></div>
+
+<p>Then open a PR on GitHub into <code class="language-plaintext highlighter-rouge">main</code>.</p>
+
+<ul>
+  <li><strong>Open a draft PR early</strong> if you want visibility or feedback mid-task — it costs nothing and lets others see what you’re working on.</li>
+  <li><strong>Write a real description</strong>: what changed, why, and how you tested it. “Updates code” is not a description. If it fixes a bug, say how you confirmed the fix.</li>
+  <li><strong>Keep PRs small.</strong> A 2,000-line PR touching twelve files will not get a careful review from anyone. If you can split it into two PRs, do.</li>
+  <li><strong>At least one reviewer must approve before merging</strong> (enforced by branch protection). Assign a reviewer, don’t just wait for someone to notice.</li>
+  <li>Once approved and passing any checks, merge it yourself — don’t wait on the reviewer to do it.</li>
+</ul>
+
+<hr />
+
+<h2 id="7-reviewing-others-code">7. Reviewing others’ code</h2>
+
+<p>Everyone in the group reviews, not just senior members — reviewing is one of the fastest ways to learn the codebase.</p>
+
+<ul>
+  <li>Aim to review within 1–2 business days so people aren’t blocked.</li>
+  <li>Comment on logic, correctness, and clarity — not personal style preferences that <code class="language-plaintext highlighter-rouge">pre-commit</code>/formatters should be handling automatically.</li>
+  <li>Ask questions instead of issuing verdicts: “What happens here if the mesh has zero elements?” is more useful than “this is wrong.”</li>
+  <li>Approving a PR doesn’t mean it’s perfect — it means you’re confident it’s correct and reasonably clear. Nitpicks can be left as non-blocking comments.</li>
+</ul>
+
+<hr />
+
+<h2 id="8-issues">8. Issues</h2>
+
+<p>Use GitHub Issues for anything bigger than a five-minute task: bugs, feature requests, “we should really refactor X.”</p>
+
+<ul>
+  <li>One issue = one problem. Don’t bundle five unrelated things into one issue.</li>
+  <li>Link PRs to the issues they resolve using <code class="language-plaintext highlighter-rouge">Closes #12</code> in the PR description — GitHub will auto-close the issue on merge.</li>
+  <li>If you start work on something, assign yourself so two people don’t duplicate it.</li>
+</ul>
+
+<hr />
+
+<h2 id="9-data-secrets-and-environments">9. Data, secrets, and environments</h2>
+
+<ul>
+  <li><strong>Never commit data files, results, or anything over a few hundred KB.</strong> Use <code class="language-plaintext highlighter-rouge">.gitignore</code> (see below). If data needs to be shared, use a shared drive, Box, or Git LFS — not the repo.</li>
+  <li><strong>Never commit API keys, passwords, or credentials.</strong> If you do this by accident, rotate the credential immediately — removing it from a later commit does not remove it from history.</li>
+  <li><strong>Pin your dependencies.</strong> Add packages with <code class="language-plaintext highlighter-rouge">uv add &lt;package&gt;</code> rather than <code class="language-plaintext highlighter-rouge">pip install</code> — it updates <code class="language-plaintext highlighter-rouge">pyproject.toml</code> and re-pins exact versions in <code class="language-plaintext highlighter-rouge">uv.lock</code> automatically. <strong>Always commit <code class="language-plaintext highlighter-rouge">uv.lock</code></strong>; that’s what makes everyone’s (and every cluster job’s) environment identical. If you edit <code class="language-plaintext highlighter-rouge">pyproject.toml</code> by hand, run <code class="language-plaintext highlighter-rouge">uv sync</code> afterward to update the lockfile.</li>
+</ul>
+
+<h3 id="gitignore"><code class="language-plaintext highlighter-rouge">.gitignore</code></h3>
+
+<p>Start from GitHub’s official template: <strong><a href="https://github.com/github/gitignore/blob/main/Python.gitignore">github/gitignore → Python.gitignore</a></strong>. It already covers <code class="language-plaintext highlighter-rouge">__pycache__/</code>, <code class="language-plaintext highlighter-rouge">.venv/</code>, <code class="language-plaintext highlighter-rouge">.env</code>, <code class="language-plaintext highlighter-rouge">.ipynb_checkpoints</code>, and similar standard Python/tooling clutter, so there’s no need to maintain that list by hand.</p>
+
+<p>It won’t know about our lab-specific conventions, so add these on top of it:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>data/
+results/
+*.mat
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="10-tests-and-documentation">10. Tests and documentation</h2>
+
+<p>You don’t need exhaustive test coverage on research code, but:</p>
+
+<ul>
+  <li>Any function other people call (solvers, data-processing utilities, unit conversions) should have at least one test that checks a known input/output pair.</li>
+  <li>Run <code class="language-plaintext highlighter-rouge">pytest</code> before opening a PR, not after someone flags a failure.</li>
+  <li>
+    <p>Use docstrings on shared functions — NumPy-style is standard in scientific Python:</p>
+
+    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">natural_frequency</span><span class="p">(</span><span class="n">k</span><span class="p">,</span> <span class="n">m</span><span class="p">):</span>
+    <span class="s">"""Compute the natural frequency of a spring-mass system.
+
+    Parameters
+    ----------
+    k : float
+        Spring stiffness [N/m].
+    m : float
+        Mass [kg].
+
+    Returns
+    -------
+    float
+        Natural frequency [rad/s].
+    """</span>
+</code></pre></div>    </div>
+  </li>
+  <li>Comment on <em>why</em>, not <em>what</em>. <code class="language-plaintext highlighter-rouge"># convert to SI because the sensor reports mbar</code> is useful; <code class="language-plaintext highlighter-rouge"># multiply x by 100</code> is not.</li>
+</ul>
+
+<hr />
+
+<h2 id="11-quick-command-reference">11. Quick command reference</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Task</th>
+      <th>Command</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Start a new branch</td>
+      <td><code class="language-plaintext highlighter-rouge">git checkout -b feature/name</code></td>
+    </tr>
+    <tr>
+      <td>Check what’s changed</td>
+      <td><code class="language-plaintext highlighter-rouge">git status</code></td>
+    </tr>
+    <tr>
+      <td>Stage and commit</td>
+      <td><code class="language-plaintext highlighter-rouge">git add -p</code> then <code class="language-plaintext highlighter-rouge">git commit -m "message"</code></td>
+    </tr>
+    <tr>
+      <td>Push a new branch</td>
+      <td><code class="language-plaintext highlighter-rouge">git push -u origin feature/name</code></td>
+    </tr>
+    <tr>
+      <td>Update your branch with latest <code class="language-plaintext highlighter-rouge">main</code></td>
+      <td><code class="language-plaintext highlighter-rouge">git checkout main &amp;&amp; git pull &amp;&amp; git checkout feature/name &amp;&amp; git merge main</code></td>
+    </tr>
+    <tr>
+      <td>See history</td>
+      <td><code class="language-plaintext highlighter-rouge">git log --oneline --graph</code></td>
+    </tr>
+    <tr>
+      <td>Undo uncommitted changes to a file</td>
+      <td><code class="language-plaintext highlighter-rouge">git checkout -- filename</code></td>
+    </tr>
+    <tr>
+      <td>Temporarily shelve changes</td>
+      <td><code class="language-plaintext highlighter-rouge">git stash</code> / <code class="language-plaintext highlighter-rouge">git stash pop</code></td>
+    </tr>
+  </tbody>
+</table>
+
+<p>If you’re not sure what a command will do, don’t guess — ask, or check <strong><a href="https://ohshitgit.com">oh-shit-git.com</a></strong>. Almost every git mistake is recoverable if you stop and ask before running more commands.</p>
+
+<hr />
+
+<h2 id="12-further-resources">12. Further resources</h2>
+
+<p>If you want to build up git skills beyond what this doc covers:</p>
+
+<ul>
+  <li><strong><a href="https://learngitbranching.js.org/">Learn Git Branching</a></strong> — an interactive, visual sandbox for practicing branching, merging, and rebasing. Best starting point if you’ve only ever used <code class="language-plaintext highlighter-rouge">add</code>/<code class="language-plaintext highlighter-rouge">commit</code>/<code class="language-plaintext highlighter-rouge">push</code>.</li>
+  <li><strong><a href="https://swcarpentry.github.io/git-novice/">Version Control with Git — Software Carpentry</a></strong> — a novice-friendly lesson written specifically for researchers, covering why version control matters for reproducible science.</li>
+  <li><strong><a href="https://skills.github.com/">GitHub Skills</a></strong> — free, hands-on courses that run inside real GitHub repos. Good for learning pull requests and code review specifically, i.e. exactly the workflow in this doc.</li>
+  <li><strong><a href="https://git-scm.com/book/en/v2">Pro Git (free online book)</a></strong> — the canonical deep reference for when you want to understand what git is actually doing under the hood.</li>
+  <li><strong><a href="https://ohshitgit.com/">Oh Shit, Git!?!</a></strong> — a blunt, fast cheat sheet for undoing common git mistakes. Bookmark this before you need it.</li>
+  <li><strong><a href="https://book.the-turing-way.org/">The Turing Way</a></strong> — a handbook for reproducible, collaborative research aimed at researchers rather than software engineers; covers version control alongside project structure and collaboration.</li>
+</ul>
+
+<hr />
+
+<h2 id="13-new-member-checklist">13. New member checklist</h2>
+
+<ul>
+  <li><input type="checkbox" disabled="" /> Git installed, <code class="language-plaintext highlighter-rouge">user.name</code>/<code class="language-plaintext highlighter-rouge">user.email</code> configured</li>
+  <li><input type="checkbox" disabled="" /> SSH key added to your GitHub account</li>
+  <li><input type="checkbox" disabled="" /> Repo cloned, virtual environment set up, <code class="language-plaintext highlighter-rouge">pytest</code> passes locally</li>
+  <li><input type="checkbox" disabled="" /> Read this document</li>
+  <li><input type="checkbox" disabled="" /> Opened one small practice PR (e.g., fix a typo in the README) to see the review flow before your first real change</li>
+</ul>
+
+  </main>
+  <footer class="mt-auto py-3 text-center">
+
+  <small class="text-muted mb-2">
+    <!-- <i class="fas fa-code"></i> with <i class="fas fa-heart"></i> -->
+    <!-- by <strong>Zach Patterson</strong> -->
+    <strong>&Psi;&Phi;Lab</strong>
+  </small>
+
+  <div class="container-fluid justify-content-center"><a class="social mx-1"  href="mailto:zpatt@case.edu"
+       style="color: #6c757d"
+       onMouseOver="this.style.color='#db4437'"
+       onMouseOut="this.style.color='#6c757d'">
+      <i class="fas fa-envelope fa-1x"></i>
+    </a><a class="social mx-1"  href="https://www.github.com/CyPhiLab"
+       style="color: #6c757d"
+       onMouseOver="this.style.color='#333333'"
+       onMouseOut="this.style.color='#6c757d'">
+      <i class="fab fa-github fa-1x"></i>
+    </a><a class="social mx-1"  href="https://www.linkedin.com/in/zpatt"
+       style="color: #6c757d"
+       onMouseOver="this.style.color='#007bb5'"
+       onMouseOut="this.style.color='#6c757d'">
+      <i class="fab fa-linkedin-in fa-1x"></i>
+    </a>
+
+</div>
+
+  <!---->
+  <!-- <small id="attribution">
+    theme <a href="https://github.com/YoussefRaafatNasry/portfolYOU">portfolYOU</a>
+  </small> -->
+
+</footer>
+
+  
+  <!-- GitHub Buttons -->
+<script async defer src="https://buttons.github.io/buttons.js"></script>
+
+<!-- jQuery CDN -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<!-- Popper.js CDN -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
+
+<!-- Bootstrap JS CDN -->
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+<!-- wow.js CDN & Activation -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.js"></script>
+<script> new WOW().init(); </script>
+
+<!-- Initialize all tooltips -->
+<script>
+$(function () {
+    $('[data-toggle="tooltip"]').tooltip()
+})
+</script>
+</body>
+
+</html>

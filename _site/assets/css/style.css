@@ -169,6 +169,12 @@ body { font-family: "Poppins", sans-serif; }
 .member.card .card-img-top { border-radius: 15px 15px 0 0; }
 .member.card:hover:not(.post) { transform: translateY(-8px); box-shadow: -2px 8px 40px -12px rgba(0, 0, 0, 0.24); }
 
+.figure-row { display: flex; flex-wrap: wrap; gap: 1rem; max-width: 720px; margin: 1.5rem auto; }
+.figure-row figure { flex: var(--ar, 1) 1 0; min-width: 220px; margin: 0; }
+.figure-row img, .figure-row video { width: 100%; height: auto; }
+.figure-row figcaption { font-size: 0.85rem; opacity: 0.8; margin-top: 0.4rem; text-align: center; }
+@media (max-width: 576px) { .figure-row figure { flex: 1 1 100%; } }
+
 .timeline-body { position: relative; border-radius: 0 15px 15px 0; padding: 5px 0; }
 .timeline-body:after { content: ""; width: 4px; height: 100%; background-color: #007bff; position: absolute; left: -4px; top: 0; }
 .timeline-body .timeline-item { position: relative; }

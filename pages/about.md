@@ -23,6 +23,4 @@ The Cybernetics and Physical Intelligence Laboratory is a research lab at <a hre
 <!-- <div class="row">
 {% include about/timeline.html %}
 </div> -->
-\
-\
-![preview](yawzi_gif.gif)
+{% include elements/video.html id="T8ybqTUFuIA" %}

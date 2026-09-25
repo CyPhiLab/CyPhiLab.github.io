@@ -66,10 +66,10 @@ Email: [zpatt@case.edu](mailto:zpatt@case.edu) | Phone: (814) 329-8242
 
 **Instructor** - Case Western Reserve University
 
-**Fall 2025 | EMAE 285, Mechanical Engineering Measurements**
+**Fall 2025, 26 | EMAE 285, Mechanical Engineering Measurements**
 - Undergraduate level course on applied probability and statistics, measurements, data analysis, and machine learning.
 
-**Spring 2025 | EMAE 485, Nonlinear Dynamics and Control**
+**Spring 2025, 26 | EMAE 485, Nonlinear Dynamics and Control**
 - Graduate level course in control theory blending the classical and the modern with a focus on robotics. See the course website: [https://nonlinear-control-emae-485.github.io/](https://nonlinear-control-emae-485.github.io/)
 
 

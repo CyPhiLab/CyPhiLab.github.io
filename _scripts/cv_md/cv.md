@@ -113,6 +113,7 @@ Email: [zpatt@case.edu](mailto:zpatt@case.edu) | Phone: (814) 329-8242
 - Associate editor for IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)
 - IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)
 - IEEE International Conference on Robotics and Automation (ICRA)
+- Conference on Robot Learning (CoRL)
 - IEEE Transactions on Robotics (T-RO)
 - IEEE Transactions on Automation Science and Engineering (T-ASE)
 - IEEE Robotics and Automation Letters (RAL)

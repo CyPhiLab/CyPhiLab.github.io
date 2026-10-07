@@ -45,9 +45,17 @@
 
 ## Preprints
 
-**4.** **Zach J. Patterson**, Emily Sologuren, Levi Cai, Daniel Kim, Alaa Maalouf, Pascal Spino, Daniela Rus, "Autonomous Sea Turtle Robot for Marine Fieldwork." *arXiv preprint arXiv:ARXIV.2602.21389*, 2026. [DOI](https://doi.org/10.48550/ARXIV.2602.21389)
+**8.** **Zach J. Patterson**, Emily Sologuren, Levi Cai, Daniel Kim, Alaa Maalouf, Pascal Spino, Daniela Rus, "Autonomous Sea Turtle Robot for Marine Fieldwork." *arXiv preprint arXiv:ARXIV.2602.21389*, 2026. [DOI](https://doi.org/10.48550/ARXIV.2602.21389)
 
-**3.** Huy Pham, **Zach J. Patterson**, "Control Lyapunov Functions for Underactuated Soft Robots." *arXiv preprint arXiv:ARXIV.2603.05638*, 2026. [DOI](https://doi.org/10.48550/ARXIV.2603.05638)
+**7.** Huy Pham, **Zach J. Patterson**, "Control Lyapunov Functions for Underactuated Soft Robots." *arXiv preprint arXiv:ARXIV.2603.05638*, 2026. [DOI](https://doi.org/10.48550/ARXIV.2603.05638)
+
+**6.** T. Konstantin Rusch, Tim Seyde, Jared Boyer, **Zach J. Patterson**, Daniela Rus, "Looped Actor: Depth-Recurrent Reasoning Models for Reinforcement Learning." *arXiv preprint arXiv:2609.37432v1*, 2026
+
+**5.** Huy Pham, Levi Cai, Yogesh Girdhar, Daniela Rus, **Zach J. Patterson**, "Characterizing Wildlife Response to Biomimetic and Conventional Underwater Vehicles." *arXiv preprint arXiv:2609.22594v1*, 2026
+
+**4.** **Zach J. Patterson**, "Quantifying Mechanical Intelligence in Legged Robots with Information Theory." *arXiv preprint arXiv:2609.19588v1*, 2026
+
+**3.** Bryce Grant, Aryeh Rothenberg, Logan Senning, Zonghe Chua, **Zach Patterson**, Peng Wang, "Sequential Planning via Anchored Robotic Keypoints." *arXiv preprint arXiv:2606.30613v1*, 2026
 
 **2.** Maximilian Stölzle, T. K. Rusch, **Zach J. Patterson**, Rodrigo Pérez-Dattari, Francesco Stella, Josie Hughes, Cosimo Della Santina, Daniela Rus, "Learning to Move in Rhythm: Task-Conditioned Motion Policies with Orbital Stability Guarantees." *arXiv preprint arXiv:ARXIV.2507.10602*, 2025. [DOI](https://doi.org/10.48550/ARXIV.2507.10602)
 

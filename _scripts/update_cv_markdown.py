@@ -21,6 +21,10 @@ from pybtex.database import BibliographyData, Entry
 # ----------------- CONFIG ------------------
 ORCID_ID      = "0000-0003-4371-7442"
 ARXIV_AUTHOR  = "Zach J. Patterson"      # how you appear on arXiv
+ARXIV_QUERY   = "Zach Patterson"         # also matches "Zach J. Patterson"
+# A different "Zach Patterson" publishes in software engineering; papers under
+# the bare name are skipped when all their categories are in this set.
+ARXIV_OTHER_AUTHOR_CATEGORIES = {"cs.SE", "cs.PL"}
 USER_AGENT    = "orcid-to-bib/0.1 (mailto:zpatt@case.edu)"
 # --------------------------------------------
 
@@ -325,8 +329,11 @@ def deduplicate(entries):
 def fetch_arxiv_preprints(known_titles):
     """Fetch arXiv preprints for the author that aren't already known."""
     logging.info("Querying arXiv...")
-    q   = ARXIV_AUTHOR.replace(" ", "+")
-    url = f"http://export.arxiv.org/api/query?search_query=au:{q}&start=0&max_results=100"
+    # Quote the name so arXiv treats it as one author phrase; unquoted, it
+    # becomes "au:Zach OR all:J. OR all:Patterson" and matches ~1M papers.
+    q   = '%22' + ARXIV_QUERY.replace(" ", "+") + '%22'
+    url = (f"https://export.arxiv.org/api/query?search_query=au:{q}"
+           "&start=0&max_results=100&sortBy=submittedDate&sortOrder=descending")
     
     # Retry with exponential backoff
     max_retries = 3
@@ -349,15 +356,23 @@ def fetch_arxiv_preprints(known_titles):
     def is_author_match(name):
         """Check if a name matches our target author."""
         n = name.lower()
-        return ("patterson" in n and 
+        return ("patterson" in n and
                 (("zach" in n and "j." in n) or
                  ("z." in n and "j." in n) or
                  n == "zach j. patterson" or
                  n == "z. j. patterson"))
-    
+
+    def is_bare_name_match(ent):
+        """Accept 'Zach Patterson' unless the paper looks like the other author's."""
+        if not any(a.name.lower() == "zach patterson" for a in ent.authors):
+            return False
+        cats = {t.term for t in ent.get("tags", [])}
+        return not cats or not cats <= ARXIV_OTHER_AUTHOR_CATEGORIES
+
     new = {}
     for ent in feed.entries:
-        if not any(is_author_match(a.name) for a in ent.authors):
+        if not (any(is_author_match(a.name) for a in ent.authors) or
+                is_bare_name_match(ent)):
             continue
         title_n = norm(ent.title)
         if title_n in known_titles:

@@ -33,15 +33,15 @@ Email: [zpatt@case.edu](mailto:zpatt@case.edu) | Phone: (814) 329-8242
 <!-- PUBLICATIONS_START -->
 ## Journal Articles
 
-**9.** **Zach J. Patterson**, Henry C. Astley, Carmel Majidi, "Soft robotic brittle star shows the influence of mass distribution on underwater walking." *Bioinspiration & Biomimetics*, March 2025. [DOI](https://doi.org/10.1088/1748-3190/adbecb)
+**9.** Akua K. Dickson, Juan C. P. Garcia, Meredith L. Anderson, Ran Jing, Sarah Alizadeh-Shabdiz, Audrey X. Wang, Charles DeLorey, **Zach J. Patterson**, Andrew P. Sabelhaus, "Safe Autonomous Environmental Contact for Soft Robots Using Control Barrier Functions." *IEEE Robotics and Automation Letters*, November 2025. [DOI](https://doi.org/10.1109/lra.2025.3609669)
 
-**8.** Akua K. Dickson, Juan C. P. Garcia, Meredith L. Anderson, Ran Jing, Sarah Alizadeh-Shabdiz, Audrey X. Wang, Charles DeLorey, **Zach J. Patterson**, Andrew P. Sabelhaus, "Safe Autonomous Environmental Contact for Soft Robots Using Control Barrier Functions." *IEEE Robotics and Automation Letters*, November 2025. [DOI](https://doi.org/10.1109/lra.2025.3609669)
+**8.** **Zach J. Patterson**, Henry C. Astley, Carmel Majidi, "Soft robotic brittle star shows the influence of mass distribution on underwater walking." *Bioinspiration & Biomimetics*, March 2025. [DOI](https://doi.org/10.1088/1748-3190/adbecb)
 
 **7.** Andrew P. Sabelhaus, **Zach J. Patterson**, Anthony T. Wertz, Carmel Majidi, "Safe Supervisory Control of Soft Robot Actuators." *Soft Robotics*, August 2024. [DOI](https://doi.org/10.1089/soro.2022.0131)
 
-**6.** **Zach J. Patterson**, Dinesh K. Patel, Sarah Bergbreiter, Lining Yao, Carmel Majidi, "A Method for 3D Printing and Rapid Prototyping of Fieldable Untethered Soft Robots." *Soft Robotics*, April 2023. [DOI](https://doi.org/10.1089/soro.2022.0003)
+**6.** Richard Desatnik, **Zach J. Patterson**, Przemysław Gorzelak, Samuel Zamora, Philip LeDuc, Carmel Majidi, "Soft robotics informs how an early echinoderm moved." *Proceedings of the National Academy of Sciences*, November 2023. [DOI](https://doi.org/10.1073/pnas.2306580120)
 
-**5.** Richard Desatnik, **Zach J. Patterson**, Przemysław Gorzelak, Samuel Zamora, Philip LeDuc, Carmel Majidi, "Soft robotics informs how an early echinoderm moved." *Proceedings of the National Academy of Sciences*, November 2023. [DOI](https://doi.org/10.1073/pnas.2306580120)
+**5.** **Zach J. Patterson**, Dinesh K. Patel, Sarah Bergbreiter, Lining Yao, Carmel Majidi, "A Method for 3D Printing and Rapid Prototyping of Fieldable Untethered Soft Robots." *Soft Robotics*, April 2023. [DOI](https://doi.org/10.1089/soro.2022.0003)
 
 **4.** Xiaonan Huang, **Zach J. Patterson**, Andrew P. Sabelhaus, Weicheng Huang, Kiyn Chin, Zhijian Ren, Mohammad K. Jawed, Carmel Majidi, "Design and Closed‐Loop Motion Planning of an Untethered Swimming Soft Robot Using 2D Discrete Elastic Rods Simulations." *Advanced Intelligent Systems*, September 2022. [DOI](https://doi.org/10.1002/aisy.202200163)
 
@@ -73,21 +73,21 @@ Email: [zpatt@case.edu](mailto:zpatt@case.edu) | Phone: (814) 329-8242
 
 ## Preprints
 
-**8.** **Zach J. Patterson**, Emily Sologuren, Levi Cai, Daniel Kim, Alaa Maalouf, Pascal Spino, Daniela Rus, "Autonomous Sea Turtle Robot for Marine Fieldwork." *arXiv preprint arXiv:ARXIV.2602.21389*, 2026. [DOI](https://doi.org/10.48550/ARXIV.2602.21389)
+**8.** T. K. Rusch, Tim Seyde, Jared Boyer, **Zach J. Patterson**, Daniela Rus, "Looped Actor: Depth-Recurrent Reasoning Models for Reinforcement Learning." *arXiv preprint arXiv:ARXIV.2609.37432*, September 2026. [DOI](https://doi.org/10.48550/ARXIV.2609.37432)
 
-**7.** Huy Pham, **Zach J. Patterson**, "Control Lyapunov Functions for Underactuated Soft Robots." *arXiv preprint arXiv:ARXIV.2603.05638*, 2026. [DOI](https://doi.org/10.48550/ARXIV.2603.05638)
+**7.** Huy Pham, Levi Cai, Yogesh Girdhar, Daniela Rus, **Zach J. Patterson**, "Characterizing Wildlife Response to Biomimetic and Conventional Underwater Vehicles." *arXiv preprint arXiv:ARXIV.2609.22594*, September 2026. [DOI](https://doi.org/10.48550/ARXIV.2609.22594)
 
-**6.** T. Konstantin Rusch, Tim Seyde, Jared Boyer, **Zach J. Patterson**, Daniela Rus, "Looped Actor: Depth-Recurrent Reasoning Models for Reinforcement Learning." *arXiv preprint arXiv:2609.37432v1*, 2026
+**6.** **Zach J. Patterson**, "Quantifying Mechanical Intelligence in Legged Robots with Information Theory." *arXiv preprint arXiv:ARXIV.2609.19588*, September 2026. [DOI](https://doi.org/10.48550/ARXIV.2609.19588)
 
-**5.** Huy Pham, Levi Cai, Yogesh Girdhar, Daniela Rus, **Zach J. Patterson**, "Characterizing Wildlife Response to Biomimetic and Conventional Underwater Vehicles." *arXiv preprint arXiv:2609.22594v1*, 2026
+**5.** Bryce Grant, Aryeh Rothenberg, Logan Senning, Zonghe Chua, **Zach Patterson**, Peng Wang, "Sequential Planning via Anchored Robotic Keypoints." *arXiv preprint arXiv:ARXIV.2606.30613*, June 2026. [DOI](https://doi.org/10.48550/ARXIV.2606.30613)
 
-**4.** **Zach J. Patterson**, "Quantifying Mechanical Intelligence in Legged Robots with Information Theory." *arXiv preprint arXiv:2609.19588v1*, 2026
+**4.** Huy Pham, **Zach J. Patterson**, "Control Lyapunov Functions for Underactuated Soft Robots." *arXiv preprint arXiv:ARXIV.2603.05638*, March 2026. [DOI](https://doi.org/10.48550/ARXIV.2603.05638)
 
-**3.** Bryce Grant, Aryeh Rothenberg, Logan Senning, Zonghe Chua, **Zach Patterson**, Peng Wang, "Sequential Planning via Anchored Robotic Keypoints." *arXiv preprint arXiv:2606.30613v1*, 2026
+**3.** **Zach J. Patterson**, Emily Sologuren, Levi Cai, Daniel Kim, Alaa Maalouf, Pascal Spino, Daniela Rus, "Autonomous Sea Turtle Robot for Marine Fieldwork." *arXiv preprint arXiv:ARXIV.2602.21389*, February 2026. [DOI](https://doi.org/10.48550/ARXIV.2602.21389)
 
-**2.** Maximilian Stölzle, T. K. Rusch, **Zach J. Patterson**, Rodrigo Pérez-Dattari, Francesco Stella, Josie Hughes, Cosimo Della Santina, Daniela Rus, "Learning to Move in Rhythm: Task-Conditioned Motion Policies with Orbital Stability Guarantees." *arXiv preprint arXiv:ARXIV.2507.10602*, 2025. [DOI](https://doi.org/10.48550/ARXIV.2507.10602)
+**2.** Maximilian Stölzle, T. K. Rusch, **Zach J. Patterson**, Rodrigo Pérez-Dattari, Francesco Stella, Josie Hughes, Cosimo Della Santina, Daniela Rus, "Learning to Move in Rhythm: Task-Conditioned Motion Policies with Orbital Stability Guarantees." *arXiv preprint arXiv:ARXIV.2507.10602*, July 2025. [DOI](https://doi.org/10.48550/ARXIV.2507.10602)
 
-**1.** **Zach J. Patterson**, Emily Sologuren, Cosimo Della Santina, Daniela Rus, "Design and Control of Modular Soft-Rigid Hybrid Manipulators with Self-Contact." *arXiv preprint arXiv:ARXIV.2408.09275*, 2024. [DOI](https://doi.org/10.48550/ARXIV.2408.09275)
+**1.** **Zach J. Patterson**, Emily Sologuren, Cosimo Della Santina, Daniela Rus, "Design and Control of Modular Soft-Rigid Hybrid Manipulators with Self-Contact." *arXiv preprint arXiv:ARXIV.2408.09275*, August 2024. [DOI](https://doi.org/10.48550/ARXIV.2408.09275)
 <!-- PUBLICATIONS_END -->
 
 ## Invited Talks + Presentations

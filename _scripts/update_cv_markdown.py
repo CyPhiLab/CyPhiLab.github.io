@@ -14,6 +14,7 @@ import logging
 import requests
 import feedparser
 import argparse
+import calendar
 from datetime import datetime
 from pybtex.database import BibliographyData, Entry
 # --------------------------------------------
@@ -94,6 +95,20 @@ def url_from_work(summary):
     for ext in summary.get("external-ids", {}).get("external-id", []):
         if ext["external-id-type"] == "uri":
             return ext["external-id-value"]
+
+ARXIV_ID_RE = re.compile(r'(?:10\.48550/arxiv\.|arxiv\.org/(?:abs|pdf)/|arxiv:)(\d{4}\.\d{4,5})',
+                         re.IGNORECASE)
+
+def arxiv_ids_from_work(summary):
+    """Collect arXiv IDs (without version) referenced by an ORCID work summary."""
+    ids = set()
+    for ext in (summary.get("external-ids") or {}).get("external-id", []):
+        value = ext.get("external-id-value", "")
+        if ext.get("external-id-type") == "arxiv":
+            value = "arxiv:" + re.sub(r'^arxiv:', '', value, flags=re.IGNORECASE)
+        ids.update(ARXIV_ID_RE.findall(value))
+    ids.update(ARXIV_ID_RE.findall((summary.get("url") or {}).get("value", "")))
+    return ids
 
 def get_orcid_work_details(orcid_id, put_code):
     """Fetch detailed information for a specific ORCID work."""
@@ -326,8 +341,12 @@ def deduplicate(entries):
     return dedup
 
 # ---------- arXiv ----------
-def fetch_arxiv_preprints(known_titles):
-    """Fetch arXiv preprints for the author that aren't already known."""
+def fetch_arxiv_preprints(known_titles, known_arxiv_ids=frozenset()):
+    """Fetch arXiv preprints for the author that aren't already known.
+
+    Papers whose arXiv ID already appears in ORCID are skipped even if the
+    title differs, so a paper is never taken from both sources.
+    """
     logging.info("Querying arXiv...")
     # Quote the name so arXiv treats it as one author phrase; unquoted, it
     # becomes "au:Zach OR all:J. OR all:Patterson" and matches ~1M papers.
@@ -374,6 +393,10 @@ def fetch_arxiv_preprints(known_titles):
         if not (any(is_author_match(a.name) for a in ent.authors) or
                 is_bare_name_match(ent)):
             continue
+        arxiv_id = re.sub(r'v\d+$', '', ent.id.split('/')[-1])
+        if arxiv_id in known_arxiv_ids:
+            logging.info(f"Skipping arXiv {arxiv_id} (already in ORCID): {' '.join(ent.title.split())}")
+            continue
         title_n = norm(ent.title)
         if title_n in known_titles:
             continue
@@ -391,6 +414,23 @@ def fetch_arxiv_preprints(known_titles):
     return new
 
 # ---------- Markdown Generation ----------
+_MONTH_NUMBERS = {m: i for i, m in enumerate(
+    ["jan", "feb", "mar", "apr", "may", "jun",
+     "jul", "aug", "sep", "oct", "nov", "dec"], 1)}
+
+def chronological_key(entry):
+    """Sort key (year, month, arXiv ID); arXiv IDs encode YYMM when month is missing."""
+    year_str = entry.fields.get("year", "")
+    year = int(year_str) if year_str.isdigit() else 0
+    month_str = entry.fields.get("month", "").strip().lower()
+    month = int(month_str) if month_str.isdigit() else _MONTH_NUMBERS.get(month_str[:3], 0)
+    m = re.search(r'(\d{2})(\d{2})\.\d{4,5}',
+                  entry.fields.get("eprint", "") + " " + entry.fields.get("doi", ""))
+    arxiv_id = m.group(0) if m else ""
+    if m and not month and 2000 + int(m.group(1)) == year:
+        month = int(m.group(2))
+    return (year, month, arxiv_id)
+
 def format_markdown_entry(entry, entry_type="journal"):
     """Convert a pybtex entry to Markdown format string."""
     title = entry.fields.get("title", "").replace("{", "").replace("}", "")
@@ -477,6 +517,10 @@ def format_markdown_entry(entry, entry_type="journal"):
         date_str = f"{month} {year}" if month else year
         venue_str = f"*{booktitle}*, {date_str}"
     else:  # preprint
+        # Preprint metadata rarely has a month; chronological_key infers it from the arXiv ID
+        _, month_num, _ = chronological_key(entry)
+        if month_num:
+            year = f"{calendar.month_name[month_num]} {year}"
         if "arxiv" in entry.fields.get("eprint", "").lower() or "arxiv" in entry.fields.get("doi", "").lower():
             arxiv_id = entry.fields.get("eprint", "").replace("arXiv:", "")
             if not arxiv_id:
@@ -504,10 +548,10 @@ def generate_markdown_from_entries(entries_dict, output_file, entry_type, sectio
         logging.info(f"No {entry_type} entries to generate")
         return
     
-    # Sort entries by year (newest first)
+    # Sort entries by date (newest first)
     sorted_entries = sorted(
         entries_dict.items(),
-        key=lambda x: int(x[1].fields.get('year', '0')),
+        key=lambda x: chronological_key(x[1]),
         reverse=True
     )
 
@@ -663,7 +707,10 @@ def main():
     # --- 1. Fetch and parse ORCID works ---
     logging.info("Fetching publications from ORCID...")
     entries = {}
+    orcid_arxiv_ids = set()
     for grp in get_orcid_works(ORCID_ID):
+        for s in grp["work-summary"]:
+            orcid_arxiv_ids |= arxiv_ids_from_work(s)
         summ  = grp["work-summary"][0]
         title = summ.get("title", {}).get("title", {}).get("value", "NO TITLE")
         put_code = summ.get("put-code")
@@ -696,7 +743,7 @@ def main():
     known = {norm(e.fields.get("title","")) for e in entries.values()}
 
     # --- 3. Add missing arXiv preprints ---
-    entries.update(fetch_arxiv_preprints(known))
+    entries.update(fetch_arxiv_preprints(known, orcid_arxiv_ids))
     entries = deduplicate(entries)  # Second dedup pass
 
     # --- 4. Sort into buckets ---

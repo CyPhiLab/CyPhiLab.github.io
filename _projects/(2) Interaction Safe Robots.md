@@ -19,7 +19,7 @@ As far as I can tell, this concept has been around for about as long as robots h
 
 <div class="figure-row" style="max-width: 260px">
   <figure>
-    <video src="skin_demo.mp4" autoplay muted loop playsinline></video>
+    <video src="skin_base_wall_demo.mp4" autoplay muted loop playsinline></video>
     <figcaption>CBF-based safety limits deployed on custom skins.</figcaption>
   </figure>
 </div>

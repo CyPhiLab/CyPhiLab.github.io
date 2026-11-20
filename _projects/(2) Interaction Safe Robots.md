@@ -17,9 +17,9 @@ Perhaps the most promising way that we can have an impact (pun intended) in this
 
 As far as I can tell, this concept has been around for about as long as robots have. So why don't we have the skins? My answer is rather unique: prior attempts (of which there are countless) are fundamentally limited by the *manufacturability* of the skin. Using typical fabrication approaches, prior whole body sensory skins that have been developed are far too labor intensive to allow for wide replication let alone mass production. Therefore, we are developing skins allow for rapid manufacturing in the lab (and eventually in the factory). This not only has great benefits for robotic functionality, but it also does wonders for the mental health of graduate students working on it. This avenue imposes an entirely new set of constraints and design choices, but we are confident that this will unlock the potential for a new generation of *physically* safe robots. We're dealing with the hardware and low level control first, because that is the bottleneck, but eventually we will also move towards generating motion plans that *embrace* contact as a probable outcome rather than avoiding it like the plague. 
 
-<div class="figure-row" style="max-width: 260px">
+<div class="figure-row">
   <figure>
-    <video src="skin_base_wall_demo.mp4" autoplay muted loop playsinline></video>
+    <video src="skin_base_wall_side_by_side.mp4" autoplay muted loop playsinline></video>
     <figcaption>CBF-based safety limits deployed on custom skins.</figcaption>
   </figure>
 </div>
